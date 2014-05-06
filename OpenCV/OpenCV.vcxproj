@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{45B756FF-11C3-44E3-A3E8-EC7AA4D10A2D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>OpenCV</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_calib3d242d.lib;opencv_contrib242d.lib;opencv_core242d.lib;opencv_features2d242d.lib;opencv_flann242d.lib;opencv_gpu242d.lib;opencv_highgui242d.lib;opencv_imgproc242d.lib;opencv_legacy242d.lib;opencv_ml242d.lib;opencv_objdetect242d.lib;opencv_ts242d.lib;opencv_video242d.lib;opencv_nonfree242d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opencv_calib3d242.lib;opencv_contrib242.lib;opencv_core242.lib;opencv_features2d242.lib;opencv_flann242.lib;opencv_gpu242.lib;opencv_highgui242.lib;opencv_imgproc242.lib;opencv_legacy242.lib;opencv_ml242.lib;opencv_objdetect242.lib;opencv_ts242.lib;opencv_video242.lib;opencv_nonfree242.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="foundation\CalcCovariance.cpp" />
+    <ClCompile Include="foundation\rgb2hsv.cpp" />
+    <ClCompile Include="foundation\visit_elem_iplimag.cpp" />
+    <ClCompile Include="foundation\visit_elem_mat.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="ReadSaveRGB.cpp" />
+    <ClCompile Include="ROI\roi.cpp" />
+    <ClCompile Include="ROI\roi_mat.cpp" />
+    <ClCompile Include="test\test1.cpp" />
+    <ClCompile Include="test\test2.cpp" />
+    <ClCompile Include="xml读写\xml_read_write.cpp" />
+    <ClCompile Include="二值化\Threshold.cpp" />
+    <ClCompile Include="人脸检测和行人检测\face_detection.cpp" />
+    <ClCompile Include="人脸检测和行人检测\walker_detection.cpp" />
+    <ClCompile Include="几何变换\image_rotate.cpp" />
+    <ClCompile Include="图像缩放\inter_value.cpp" />
+    <ClCompile Include="图像缩放\resize.cpp" />
+    <ClCompile Include="形态学\morphology.cpp" />
+    <ClCompile Include="形态学\morphy.cpp" />
+    <ClCompile Include="特征学习\fast_feature.cpp" />
+    <ClCompile Include="特征学习\sift_feature.cpp" />
+    <ClCompile Include="特征学习\surf_feature.cpp" />
+    <ClCompile Include="特征学习\surf_feature_opencv.cpp" />
+    <ClCompile Include="视频读取和写入\images_to_video.cpp" />
+    <ClCompile Include="视频读取和写入\read_video_info.cpp" />
+    <ClCompile Include="视频读取和写入\read_write_video.cpp" />
+    <ClCompile Include="角点检测\fast_corner_dete.cpp" />
+    <ClCompile Include="角点检测\harris_corner_detect.cpp" />
+    <ClCompile Include="角点检测\susan_corner_detect.cpp" />
+    <ClCompile Include="透视矫正\rectify.cpp" />
+    <ClCompile Include="通道分离和合并\chanel_split_merge.cpp" />
+    <ClCompile Include="颜色聚类\color_cluster.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="opencv.h" />
+    <ClInclude Include="角点检测\harris_corner_detect.h" />
+    <ClInclude Include="透视矫正\rectify.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

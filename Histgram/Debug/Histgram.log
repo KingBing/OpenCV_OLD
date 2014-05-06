@@ -1,0 +1,21 @@
+﻿生成启动时间为 2014/5/6 11:03:05。
+     1>项目“C:\Users\jmy\Documents\Visual Studio 2010\Projects\OpenCV\Histgram\Histgram.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“Debug\Histgram.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“Debug\Histgram.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt histgram.cpp source\calcHistDistance.cpp source\equalizeHist.cpp source\mutiDim.cpp source\oneDim.cpp
+         oneDim.cpp
+     1>c:\users\jmy\documents\visual studio 2010\projects\opencv\histgram\source\onedim.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         mutiDim.cpp
+         equalizeHist.cpp
+         calcHistDistance.cpp
+         histgram.cpp
+     1>c:\users\jmy\documents\visual studio 2010\projects\opencv\histgram\histgram.cpp(14): error C3861: “cnblog_tornadomeet”: 找不到标识符
+         正在生成代码...
+     1>已完成生成项目“C:\Users\jmy\Documents\Visual Studio 2010\Projects\OpenCV\Histgram\Histgram.vcxproj”(rebuild 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:10.95
