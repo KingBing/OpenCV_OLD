@@ -35,7 +35,7 @@ void channel_split_merge(char*picname)
 		cvMerge(0,gImg,0,0,gImg3);  
 		cvMerge(bImg,0,0,0,bImg3);
 
-		cvShowImage( "bImg", bImg3);//显示图像
+		cvShowImage( "bImg", bImg3);//显示分离图像
 		cvShowImage( "gImg", gImg3 );
 		cvShowImage( "rImg", rImg3);
 
@@ -45,7 +45,7 @@ void channel_split_merge(char*picname)
 		cvMerge(bImg,0,rImg,0,gImg3);  
 		cvMerge(0,gImg,rImg,0,bImg3);  
 
-		cvShowImage( "bImg", bImg3);//显示图像
+		cvShowImage( "bImg", bImg3);//显示合并图像
 		cvShowImage( "gImg", gImg3 );
 		cvShowImage( "rImg", rImg3);
 

@@ -60,7 +60,7 @@ int MeanShiftSegment()
     namedWindow("src",1);
     namedWindow("dst",1);
 
-    src=imread("stuff.jpg");
+    src=imread("test_a3(3).tif");
     CV_Assert(!src.empty());
 	imshow("src",src);
 

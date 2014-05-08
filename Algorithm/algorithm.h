@@ -15,3 +15,6 @@ int hog_svm_test();
 /*KNN分类算法*/
 int KNN();
 int KNN1( int argc, char** argv );
+
+/*模板匹配*/
+int templateMatch();

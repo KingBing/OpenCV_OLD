@@ -93,25 +93,15 @@
     <ClCompile Include="几何变换\image_rotate.cpp" />
     <ClCompile Include="图像缩放\inter_value.cpp" />
     <ClCompile Include="图像缩放\resize.cpp" />
-    <ClCompile Include="形态学\morphology.cpp" />
-    <ClCompile Include="形态学\morphy.cpp" />
-    <ClCompile Include="特征学习\fast_feature.cpp" />
-    <ClCompile Include="特征学习\sift_feature.cpp" />
-    <ClCompile Include="特征学习\surf_feature.cpp" />
-    <ClCompile Include="特征学习\surf_feature_opencv.cpp" />
     <ClCompile Include="视频读取和写入\images_to_video.cpp" />
     <ClCompile Include="视频读取和写入\read_video_info.cpp" />
     <ClCompile Include="视频读取和写入\read_write_video.cpp" />
-    <ClCompile Include="角点检测\fast_corner_dete.cpp" />
-    <ClCompile Include="角点检测\harris_corner_detect.cpp" />
-    <ClCompile Include="角点检测\susan_corner_detect.cpp" />
     <ClCompile Include="透视矫正\rectify.cpp" />
     <ClCompile Include="通道分离和合并\chanel_split_merge.cpp" />
     <ClCompile Include="颜色聚类\color_cluster.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="opencv.h" />
-    <ClInclude Include="角点检测\harris_corner_detect.h" />
     <ClInclude Include="透视矫正\rectify.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

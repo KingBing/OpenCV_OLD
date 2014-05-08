@@ -25,6 +25,12 @@
     <Filter Include="源文件\contour">
       <UniqueIdentifier>{f97ba01b-daf5-419a-bea2-630871f17131}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\circle">
+      <UniqueIdentifier>{1ae81457-c8f5-45fb-948f-0e9b9bde7418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\square">
+      <UniqueIdentifier>{bee0b492-01eb-4874-bef9-f4648ec1e240}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -48,11 +54,17 @@
     <ClCompile Include="contour\contour2.cpp">
       <Filter>源文件\contour</Filter>
     </ClCompile>
-    <ClCompile Include="linear\houghline.cpp">
-      <Filter>源文件\linear</Filter>
-    </ClCompile>
     <ClCompile Include="linear\line_dete.cpp">
       <Filter>源文件\linear</Filter>
+    </ClCompile>
+    <ClCompile Include="circle\hough_circle.cpp">
+      <Filter>源文件\circle</Filter>
+    </ClCompile>
+    <ClCompile Include="linear\hough_line.cpp">
+      <Filter>源文件\linear</Filter>
+    </ClCompile>
+    <ClCompile Include="square\sqaure_detection.cpp">
+      <Filter>源文件\square</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

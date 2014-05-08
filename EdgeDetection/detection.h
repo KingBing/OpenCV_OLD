@@ -22,6 +22,12 @@ int canny_trackbar(char*filename);//更详细地讲canny的用法,滑动条调节参数
 int stdhoughlinedete(char *filename);
 int line_dete_2(char*filename);
 
+//圆检测
+int hough_circle(char*filename);
+
+//矩形检测
+int square_detection();
+
 //二值化
 int binaryzation(char*path);
 int adaptiveThreshold();

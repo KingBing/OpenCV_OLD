@@ -33,6 +33,9 @@
     <ClCompile Include="MeanshiftSegment.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="templeteMatch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithm.h">

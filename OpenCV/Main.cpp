@@ -39,11 +39,6 @@ int main(int argc,char*argv[])
 	/*灰度图像二值化*/
 	//mythreshold(imagename);
 	
-	/*角点检测*/
-	//susan_corner_dete(imagename);
-	//harris_corner_dete(imagename);
-	//harris_corner_dete_improve(imagename);
-	//fast_corner_dete(imagename);
 	
 	/*设置图像ROI*/
 	//ROIimg(imagename);
@@ -52,9 +47,6 @@ int main(int argc,char*argv[])
 	/*颜色聚类*/
 	//color_cluster(imagename,2);
 	
-	/*形态学操作*/
-	//morphology(imagename); 
-    //morphy();
 	
 	/*图像旋转*/
 	//rotate_nearest_neibgour(imagename);
@@ -63,13 +55,7 @@ int main(int argc,char*argv[])
 	//rectify();
 	
 	/*通道分离和合并*/
-	//channel_split_merge(imagename);
-
-	/*特征学习*/
-	//fast_feature(imagename);
-	//sift_feature();
-	//surf_feature();
-	//surf_feature_opencv();未调通
+	channel_split_merge(imagename);
 
 	/*xml读写*/
 	//xml_read_write();

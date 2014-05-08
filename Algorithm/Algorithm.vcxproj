@@ -82,6 +82,7 @@
     <ClCompile Include="knn.cpp" />
     <ClCompile Include="knn1.cpp" />
     <ClCompile Include="MeanshiftSegment.cpp" />
+    <ClCompile Include="templeteMatch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithm.h" />

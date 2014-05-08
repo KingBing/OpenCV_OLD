@@ -28,17 +28,11 @@
     <Filter Include="源文件\Source\二值化">
       <UniqueIdentifier>{aeeba3ce-944d-4944-9737-fac8757f501e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="源文件\Source\角点检测">
-      <UniqueIdentifier>{ab6db10b-3cf2-4184-8ad5-171c33c4e7e7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\Source\ROI">
       <UniqueIdentifier>{5cf08ea7-96d7-49e7-9824-d2ec0d1348d2}</UniqueIdentifier>
     </Filter>
     <Filter Include="源文件\Source\颜色聚类">
       <UniqueIdentifier>{919f42ea-6234-4d40-b1c9-89357003742d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\Source\形态学">
-      <UniqueIdentifier>{41dfe9d6-1f3e-44f6-9e89-af8ae9979236}</UniqueIdentifier>
     </Filter>
     <Filter Include="源文件\Source\视频读取和写入">
       <UniqueIdentifier>{6fe37752-9a13-4843-9f74-a24cb6d68124}</UniqueIdentifier>
@@ -48,9 +42,6 @@
     </Filter>
     <Filter Include="源文件\Source\通道分离和合并">
       <UniqueIdentifier>{a1c57915-5623-4c36-a7c7-56669971979d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\Source\Feature">
-      <UniqueIdentifier>{ef810989-4267-4d47-b14e-389405f61a50}</UniqueIdentifier>
     </Filter>
     <Filter Include="源文件\Source\xml读写">
       <UniqueIdentifier>{2a6777b4-cd03-4eec-b756-cf2eac6a6490}</UniqueIdentifier>
@@ -74,9 +65,6 @@
     </ClCompile>
     <ClCompile Include="颜色聚类\color_cluster.cpp">
       <Filter>源文件\Source\颜色聚类</Filter>
-    </ClCompile>
-    <ClCompile Include="形态学\morphology.cpp">
-      <Filter>源文件\Source\形态学</Filter>
     </ClCompile>
     <ClCompile Include="视频读取和写入\read_write_video.cpp">
       <Filter>源文件\Source\视频读取和写入</Filter>
@@ -102,18 +90,6 @@
     <ClCompile Include="通道分离和合并\chanel_split_merge.cpp">
       <Filter>源文件\Source\通道分离和合并</Filter>
     </ClCompile>
-    <ClCompile Include="特征学习\fast_feature.cpp">
-      <Filter>源文件\Source\Feature</Filter>
-    </ClCompile>
-    <ClCompile Include="特征学习\surf_feature.cpp">
-      <Filter>源文件\Source\Feature</Filter>
-    </ClCompile>
-    <ClCompile Include="特征学习\sift_feature.cpp">
-      <Filter>源文件\Source\Feature</Filter>
-    </ClCompile>
-    <ClCompile Include="特征学习\surf_feature_opencv.cpp">
-      <Filter>源文件\Source\Feature</Filter>
-    </ClCompile>
     <ClCompile Include="xml读写\xml_read_write.cpp">
       <Filter>源文件\Source\xml读写</Filter>
     </ClCompile>
@@ -128,18 +104,6 @@
     </ClCompile>
     <ClCompile Include="视频读取和写入\images_to_video.cpp">
       <Filter>源文件\Source\视频读取和写入</Filter>
-    </ClCompile>
-    <ClCompile Include="形态学\morphy.cpp">
-      <Filter>源文件\Source\形态学</Filter>
-    </ClCompile>
-    <ClCompile Include="角点检测\susan_corner_detect.cpp">
-      <Filter>源文件\Source\角点检测</Filter>
-    </ClCompile>
-    <ClCompile Include="角点检测\fast_corner_dete.cpp">
-      <Filter>源文件\Source\角点检测</Filter>
-    </ClCompile>
-    <ClCompile Include="角点检测\harris_corner_detect.cpp">
-      <Filter>源文件\Source\角点检测</Filter>
     </ClCompile>
     <ClCompile Include="foundation\rgb2hsv.cpp">
       <Filter>源文件\Source\基础</Filter>
@@ -163,9 +127,6 @@
   <ItemGroup>
     <ClInclude Include="透视矫正\rectify.h">
       <Filter>源文件\Source\透视矫正</Filter>
-    </ClInclude>
-    <ClInclude Include="角点检测\harris_corner_detect.h">
-      <Filter>源文件\Source\角点检测</Filter>
     </ClInclude>
     <ClInclude Include="opencv.h">
       <Filter>头文件</Filter>
