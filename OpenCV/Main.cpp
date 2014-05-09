@@ -43,6 +43,7 @@ int main(int argc,char*argv[])
 	/*设置图像ROI*/
 	//ROIimg(imagename);
 	//roi_mat(); 
+	roi_merge();
 	
 	/*颜色聚类*/
 	//color_cluster(imagename,2);
@@ -55,7 +56,7 @@ int main(int argc,char*argv[])
 	//rectify();
 	
 	/*通道分离和合并*/
-	channel_split_merge(imagename);
+	//channel_split_merge();
 
 	/*xml读写*/
 	//xml_read_write();

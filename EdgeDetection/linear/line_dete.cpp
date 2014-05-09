@@ -163,8 +163,8 @@ int line_dete_2(char*filename)
 		cvNamedWindow( "Source", 1 );
 		cvShowImage( "Source", src );
 
-		cvNamedWindow( "Hough", 1 );
-		cvShowImage( "Hough", color_dst );
+		cvNamedWindow( "HoughLine", 1 );
+		cvShowImage( "HoughLine", color_dst );
 
 		cvWaitKey(0);
 		return 0;

@@ -123,6 +123,9 @@
     <ClCompile Include="图像缩放\resize.cpp">
       <Filter>源文件\Source\图像缩放</Filter>
     </ClCompile>
+    <ClCompile Include="ROI\roi_merge.cpp">
+      <Filter>源文件\Source\ROI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="透视矫正\rectify.h">

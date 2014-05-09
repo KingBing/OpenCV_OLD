@@ -1,0 +1,2 @@
+int affine();
+int rectify();

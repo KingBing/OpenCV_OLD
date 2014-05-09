@@ -84,6 +84,7 @@
     <ClCompile Include="ReadSaveRGB.cpp" />
     <ClCompile Include="ROI\roi.cpp" />
     <ClCompile Include="ROI\roi_mat.cpp" />
+    <ClCompile Include="ROI\roi_merge.cpp" />
     <ClCompile Include="test\test1.cpp" />
     <ClCompile Include="test\test2.cpp" />
     <ClCompile Include="xml读写\xml_read_write.cpp" />

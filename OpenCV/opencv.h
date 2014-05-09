@@ -47,6 +47,7 @@ int mythreshold(char*filename);
 //设置图像ROI
 int ROIimg(char*filename);
 int roi_mat();//该方法采用mat格式
+int roi_merge();//设置roi和图像融合
 
 
 //颜色聚类
@@ -59,7 +60,7 @@ int rotate_nearest_neibgour(char*filename);
 int rectify();
 
 //通道分离和合并
-void channel_split_merge(char*picname);
+void channel_split_merge();
  
 //Feture学习
 int fast_feature(char*filename); 
