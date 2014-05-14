@@ -76,12 +76,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="algorithm.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="find_obj\find_obj.cpp" />
     <ClCompile Include="hog_svm_test.cpp" />
     <ClCompile Include="hog_svm_train.cpp" />
     <ClCompile Include="knn.cpp" />
     <ClCompile Include="knn1.cpp" />
     <ClCompile Include="MeanshiftSegment.cpp" />
+    <ClCompile Include="SURF_Homography.cpp" />
     <ClCompile Include="templeteMatch.cpp" />
   </ItemGroup>
   <ItemGroup>

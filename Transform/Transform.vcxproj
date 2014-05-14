@@ -77,7 +77,8 @@
   <ItemGroup>
     <ClCompile Include="affine.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="透视矫正\rectify.cpp" />
+    <ClCompile Include="perspective.cpp" />
+    <ClCompile Include="透视矫正\rectAutoRectify.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="transform.h" />

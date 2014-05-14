@@ -52,5 +52,6 @@ int binaryzation(char*path)
 	cvReleaseImage(&pSrcImage);
 	cvReleaseImage(&g_pGrayImage);
 	cvReleaseImage(&g_pBinaryImage);
+	
 	return 0;
 }

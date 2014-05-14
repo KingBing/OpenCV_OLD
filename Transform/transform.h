@@ -1,2 +1,3 @@
 int affine();
-int rectify();
+int perspective();
+int rectAutoRectify();

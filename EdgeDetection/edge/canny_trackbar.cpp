@@ -6,7 +6,7 @@ using namespace std;
 
 //#pragma comment(linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"")
 IplImage *g_pSrcImage, *g_pCannyImg;
-const char *pstrWindowsCannyTitle = "边缘检测图(http://blog.csdn.net/MoreWindows)";
+const char *pstrWindowsCannyTitle = "边缘检测图(canny_trackbar)";
 
 
 //cvCreateTrackbar的回调函数
@@ -19,7 +19,7 @@ void on_trackbar(int threshold)
 int canny_trackbar(char*filename)
 {
 	//const char *pstrImageName = "lena.jpg";
-	const char *pstrWindowsSrcTitle = "原图(http://blog.csdn.net/MoreWindows)";
+	const char *pstrWindowsSrcTitle = "原图(canny_trackbar)";
 	const char *pstrWindowsToolBar = "Threshold";
 
 	//从文件中载入图像的灰度图CV_LOAD_IMAGE_GRAYSCALE - 灰度图
@@ -46,10 +46,6 @@ int canny_trackbar(char*filename)
 	cvDestroyWindow(pstrWindowsCannyTitle);
 	cvReleaseImage(&g_pSrcImage);
 	cvReleaseImage(&g_pCannyImg);
-
-
-
-
 
 
 	return 0;

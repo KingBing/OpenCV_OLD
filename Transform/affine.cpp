@@ -34,58 +34,62 @@
 
 int affine()
 {
-   const char*filename="test2.png";
+   const char*filename="rect.png";
    CvPoint2D32f srcTri[3], dstTri[3];
    CvMat* rot_mat = cvCreateMat(2,3,CV_32FC1);
    CvMat* warp_mat = cvCreateMat(2,3,CV_32FC1);
    
    IplImage *src, *dst;
-   if((src=cvLoadImage(filename,1)) != 0 )
+   if((src=cvLoadImage(filename,1)) == 0 )
     {
-		/*dst = cvCloneImage(src);
-		dst->origin = src->origin;*/
+		printf("¼ÓÔØÍ¼Æ¬Ê§°Ü\n");
+		return -1;
+	}
+    
+   /*dst = cvCloneImage(src);
+	dst->origin = src->origin;*/
 
-		dst=cvCreateImage(cvGetSize(src),src->depth,src->nChannels);
-		cvCopy(src,dst);
-		cvZero(dst);
+	dst=cvCreateImage(cvGetSize(src),src->depth,src->nChannels);
+	cvCopy(src,dst);
+	cvZero(dst);
 
-	   //COMPUTE WARP MATRIX
-	   srcTri[0].x = 0;					 //src Top left
-	   srcTri[0].y = 0;
-	   srcTri[1].x = src->width - 1;    //src Top right
-	   srcTri[1].y = 0;
-	   srcTri[2].x = 0;					//src Bottom left
-	   srcTri[2].y = src->height - 1;
+	//COMPUTE WARP MATRIX
+	srcTri[0].x = 0;					 //src Top left
+	srcTri[0].y = 0;
+	srcTri[1].x = src->width - 1;    //src Top right
+	srcTri[1].y = 0;
+	srcTri[2].x = 0;					//src Bottom left
+	srcTri[2].y = src->height - 1;
 
-	   //- - - - - - - - - - - - - - -//
-	   dstTri[0].x = src->width*0.0;    //dst Top left
-	   dstTri[0].y = src->height*0.33;
-	   dstTri[1].x = src->width*0.85;   //dst Top right
-	   dstTri[1].y = src->height*0.25;
-	   dstTri[2].x = src->width*0.15;   //dst Bottom left
-	   dstTri[2].y = src->height*0.7;
+	//- - - - - - - - - - - - - - -//
+	dstTri[0].x = src->width*0.0;    //dst Top left
+	dstTri[0].y = src->height*0.33;
+	dstTri[1].x = src->width*0.85;   //dst Top right
+	dstTri[1].y = src->height*0.25;
+	dstTri[2].x = src->width*0.15;   //dst Bottom left
+	dstTri[2].y = src->height*0.7;
 	  
-	   cvGetAffineTransform(srcTri,dstTri,warp_mat);
-	   cvWarpAffine(src,dst,warp_mat);
+	cvGetAffineTransform(srcTri,dstTri,warp_mat);
+	cvWarpAffine(src,dst,warp_mat);
 	                                                           
-	   //cvCopy(dst,src);
+	//cvCopy(dst,src);
 
-	   //COMPUTE ROTATION MATRIX
-	  /*
-	   CvPoint2D32f center = cvPoint2D32f(src->width/2,src->height/2);
-	   double angle = -50.0;
-	   double scale = 0.6;
-	   cv2DRotationMatrix(center,angle,scale,rot_mat);
-	   cvWarpAffine(src,dst,rot_mat);
-	  */
+	//COMPUTE ROTATION MATRIX
+	/*
+	CvPoint2D32f center = cvPoint2D32f(src->width/2,src->height/2);
+	double angle = -50.0;
+	double scale = 0.6;
+	cv2DRotationMatrix(center,angle,scale,rot_mat);
+	cvWarpAffine(src,dst,rot_mat);
+	*/
 
-	   //DO THE TRANSFORM:
-	   cvNamedWindow( "OiginImg", 1 );
-	   cvNamedWindow( "Affine_Transform", 1 );
-	   cvShowImage("OiginImg",src);
-       cvShowImage( "Affine_Transform", dst );
-       cvWaitKey();
-    }
+	//DO THE TRANSFORM:
+	cvNamedWindow( "OiginImg", 1 );
+	cvNamedWindow( "Affine_Transform", 1 );
+	cvShowImage("OiginImg",src);
+    cvShowImage( "Affine_Transform", dst );
+    cvWaitKey();
+    
 
    cvReleaseImage(&src);
    cvReleaseImage(&dst);

@@ -78,7 +78,8 @@
     <ClInclude Include="histgram.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="histgram.cpp" />
+    <ClCompile Include="calcDrawHist.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="source\calcHistDistance.cpp" />
     <ClCompile Include="source\equalizeHist.cpp" />
     <ClCompile Include="source\mutiDim.cpp" />

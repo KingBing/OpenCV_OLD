@@ -18,3 +18,8 @@ int KNN1( int argc, char** argv );
 
 /*Ä£°åÆ¥Åä*/
 int templateMatch();
+
+/*Ä¿±ê¼ì²â*/
+int find_obj();
+int find_obj_calonder( int argc, char **argv );
+int SURF_Homography();

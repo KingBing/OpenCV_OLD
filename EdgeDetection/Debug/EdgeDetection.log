@@ -1,17 +1,10 @@
-﻿生成启动时间为 2014/5/9 10:25:02。
+﻿生成启动时间为 2014/5/14 15:49:13。
      1>项目“E:\360云盘\Git\OpenCV_Github\EdgeDetection\EdgeDetection.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\Detection.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt linear\line_dete.cpp
-         line_dete.cpp
-     1>e:\360云盘\git\opencv_github\edgedetection\linear\line_dete.cpp(209): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-     1>e:\360云盘\git\opencv_github\edgedetection\linear\line_dete.cpp(393): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-     1>e:\360云盘\git\opencv_github\edgedetection\linear\line_dete.cpp(427): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
-     1>e:\360云盘\git\opencv_github\edgedetection\linear\line_dete.cpp(430): warning C4309: “=”: 截断常量值
-     1>e:\360云盘\git\opencv_github\edgedetection\linear\line_dete.cpp(439): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
-     1>e:\360云盘\git\opencv_github\edgedetection\linear\line_dete.cpp(441): warning C4309: “=”: 截断常量值
-     1>e:\360云盘\git\opencv_github\edgedetection\linear\line_dete.cpp(172): warning C4715: “line_dete_2”: 不是所有的控件路径都返回值
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt binaryzation\adaptiveThreshold.cpp
+         adaptiveThreshold.cpp
        ManifestResourceCompile:
          所有输出均为最新。
        Link:
@@ -22,6 +15,7 @@
          Debug\contour1.obj
          Debug\contour2.obj
          Debug\canny_trackbar.obj
+         Debug\edge_trackbar.obj
          Debug\edge_whole.obj
          Debug\hough_line.obj
          Debug\line_dete.obj
@@ -40,4 +34,4 @@
 
 生成成功。
 
-已用时间 00:00:02.92
+已用时间 00:00:03.18

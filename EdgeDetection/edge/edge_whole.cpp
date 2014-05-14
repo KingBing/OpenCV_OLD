@@ -5,6 +5,8 @@
 #include <cv.h>
 #include <highgui.h>
 
+
+
 using namespace cv;
 
 void susan(char* path)
@@ -65,7 +67,7 @@ void susan(char* path)
      }
    }
 
-	cvNamedWindow("SUSAN",0);  
+	cvNamedWindow("SUSAN",1);  
 	cvShowImage("SUSAN",nimg);    
 	cvWaitKey(0);                      
 	cvDestroyWindow("SUSAN"); 
@@ -114,7 +116,7 @@ void krisch(char* path)
 	} 
 	cvNormalize(dst,dst,0,255,CV_MINMAX); //归一化处理
 	
-	cvNamedWindow("krisch",0);      
+	cvNamedWindow("krisch",1);      
 	cvShowImage("krisch",dst); 
 	cvWaitKey(0);                  
 	cvDestroyAllWindows();  
@@ -123,82 +125,6 @@ void krisch(char* path)
 }
 
 
-IplImage *DrawHistogram(CvHistogram*hist, float scaleX = 1, float scaleY = 1)
-{  // 画直方图   
-	 float histMax = 0;  
-     cvGetMinMaxHistValue(hist, 0 , &histMax, 0, 0);  // 取得直方图中的最值   
-	 IplImage *imgHist = cvCreateImage(cvSize(256 * scaleX, 64*scaleY), 8, 1);
-	 cvZero(imgHist); //// 清空随机值
-	 for(int i = 0; i < 255; i++)
-	 {
-		 float histValue = cvQueryHistValue_1D(hist, i); // 取得直方图中的i值
-		 float nextValue = cvQueryHistValue_1D(hist, i+1);
-		 int numPt = 5;
-		 CvPoint pt[5];
-		 pt[0] = cvPoint(i*scaleX, 64*scaleY);
-		 pt[1] = cvPoint((i+1)*scaleX, 64*scaleY);
-		 pt[2] = cvPoint((i+1)*scaleX, (1 -(nextValue/histMax))* 64 * scaleY);
-		 pt[3] = cvPoint((i+1)*scaleX, (1 -(histValue/histMax))* 64 * scaleY);
-		 pt[4] = cvPoint(i*scaleX, 64*scaleY);
-		 cvFillConvexPoly(imgHist, pt, numPt, cvScalarAll(255));
-	 }
-	 return imgHist;
-}  
-
-
-void histogram(char* path)
-{
-	 IplImage* img = cvLoadImage(path,1); //RGB加载
-	 if(!img)
-		return;
-	//然后，创建并初始化一个直方图：
-    int numBins = 256;
-    float range[] = {0, 255};
-    float *ranges[] = { range };
-
-    CvHistogram *hist = cvCreateHist(1, &numBins, CV_HIST_ARRAY, ranges, 1);
-    cvClearHist(hist);
-    //在这里，我们使用的是1维的直方图，并且该直方图有256个直方柱。范围是0-255，函数cvCreateHist会自动将这个范围分解成256个直方柱。
-
-    //然后，将加载的彩色图像的BGR三个通道进行分解：分配图像空间，并调用函数cvSplit进行通道的分解：
-    IplImage* imgRed = cvCreateImage(cvGetSize(img), 8, 1);
-    IplImage* imgGreen = cvCreateImage(cvGetSize(img), 8, 1);
-    IplImage* imgBlue = cvCreateImage(cvGetSize(img), 8, 1);
-
-    cvSplit(img, imgBlue, imgGreen, imgRed, NULL);
-    //cvSplit的参数是按照B，G，R这样的一个顺序的。图像在内存中的存储也是按照B，G，R的顺序进行存储。
-
-    //（2）计算直方图，显示直方图
-       //使用R通道图像，计算R通道图像的直方图：
-    cvCalcHist(&imgRed, hist, 0, 0);
-    IplImage* imgHistRed = DrawHistogram(hist);
-    cvClearHist(hist);
-    ///函数cvCalcHist计算imgRed的直方图，并将直方图存储到hist中。imgHistRed是直方图的hist视觉效果。函数DrawHistogram将直方图绘画到图像imgHistRed上，稍后介绍这个函数。
-
-    //对其他两个通道，也进行相同的操作：
-    cvCalcHist(&imgGreen, hist, 0, 0);
-    IplImage* imgHistGreen = DrawHistogram(hist);
-    cvClearHist(hist);
-
-    cvCalcHist(&imgBlue, hist, 0, 0);
-    IplImage* imgHistBlue = DrawHistogram(hist);
-    cvClearHist(hist);
-   //最后，在窗口中显示这些直方图：
-    cvNamedWindow("Red");
-    cvNamedWindow("Green");
-    cvNamedWindow("Blue");
-
-    cvShowImage("Red", imgHistRed);
-    cvShowImage("Green", imgHistGreen);
-    cvShowImage("Blue", imgHistBlue);
-
-    cvWaitKey(0);
-	cvReleaseImage(&img);
-	cvReleaseImage(&imgHistRed);
-	cvReleaseImage(&imgHistGreen);
-	cvReleaseImage(&imgHistBlue);
-	cvDestroyAllWindows(); 
-}
 
 void roberts(char *path)
 {
@@ -253,17 +179,51 @@ void laplace(char *path)
 		return;
     IplImage *d_Image = NULL; 
     d_Image = cvCloneImage(src); 
-    cvLaplace(src,d_Image,3);
-	cvNamedWindow("Original Image",0);
+    cvLaplace(src,d_Image,3); //拉普拉斯变换
+	
+	cvNamedWindow("Original Image",1);
 	cvShowImage("Original Image",src);
-	cvNamedWindow("Laplace",0);      /* 定义一个窗口名为src的显示窗口 */
-	cvShowImage("Laplace",d_Image);    /* 在src窗口中，显示src指针所指的图像 */ 
-	cvWaitKey(0);                      /* 无限等待，即图像总显示 */
+	cvNamedWindow("Laplace",1);     
+	cvShowImage("Laplace",d_Image);   
+	
+	cvWaitKey(0);                      
+	
 	cvDestroyWindow("Laplace");   
     cvReleaseImage(&src);
 	cvReleaseImage(&d_Image);
 	cvReleaseImage(&src);	
 }
+
+void laplace_mat(char*path)
+{
+	//【0】变量的定义
+	Mat src,src_gray,dst, abs_dst;
+
+	//【1】载入原始图  
+	src = imread(path);  //工程目录下应该有一张名为1.jpg的素材图
+
+	//【2】显示原始图 
+	imshow("【原始图】图像Laplace变换(2.0)", src); 
+
+	//【3】使用高斯滤波消除噪声
+	GaussianBlur( src, src, Size(3,3), 0, 0, BORDER_DEFAULT );
+
+	//【4】转换为灰度图
+	cvtColor( src, src_gray, CV_RGB2GRAY );
+
+	//【5】使用Laplace函数
+	Laplacian( src_gray, dst, CV_16S, 3, 1, 0, BORDER_DEFAULT );
+
+	//【6】计算绝对值，并将结果转换成8位
+	convertScaleAbs( dst, abs_dst );
+
+	//【7】显示效果图
+	imshow( "【效果图】图像Laplace变换(2.0)", abs_dst );
+
+	waitKey(0); 
+
+}
+
 
 
 void prewitt(char *path)
@@ -328,9 +288,9 @@ void prewitt(char *path)
 	cvReleaseImage(&dsty);
 	cvNamedWindow("Original Image",1);
 	cvShowImage("Original Image",src);
-	cvNamedWindow("Prewitt",0);      /* 定义一个窗口名为src的显示窗口 */
-	cvShowImage("Prewitt",dst);    /* 在src窗口中，显示src指针所指的图像 */ 
-	cvWaitKey(0);                      /* 无限等待，即图像总显示 */
+	cvNamedWindow("Prewitt",1);    
+	cvShowImage("Prewitt",dst);    
+	cvWaitKey(0);                     
 	cvDestroyAllWindows();  
     cvReleaseImage(&dst);
 	cvReleaseImage(&src);
@@ -348,10 +308,10 @@ void canny(char *path)
 	imgCanny=cvCreateImage(cvSize(img->width,img->height),img->depth,img->nChannels);
 	cvCanny(img,imgCanny,100,60);
 	
-	cvNamedWindow("Original Image",0);
+	cvNamedWindow("Original Image",1);
 	cvShowImage("Original Image",img);
 	
-	cvNamedWindow("Canny Image",0);
+	cvNamedWindow("Canny Image",1);
 	cvShowImage("Canny Image",imgCanny);
 	cvWaitKey(0);
 	cvReleaseImage(&img);
@@ -380,11 +340,12 @@ void sobel(char *path)
 	cvConvertScaleAbs(img16S,imgSobely,1);
 	cvAdd(imgSobelx,imgSobely,imgSobel);	//使用两个方向的梯度绝对值和近似梯度模
 
-	cvNamedWindow("Original Image",0);
+	cvNamedWindow("Original Image",1);
 	cvShowImage("Original Image",img);
-	cvNamedWindow("Sobel Image",0);
+	cvNamedWindow("Sobel Image",1);
 	cvShowImage("Sobel Image",imgSobel);
 	cvWaitKey(0);
+	
 	cvReleaseImage(&img);
 	cvReleaseImage(&imgSobel);
 	cvReleaseImage(&imgSobelx);
@@ -412,9 +373,9 @@ void log(char *path)
 	//cvMinMaxLoc(imgLoG,&min_val,&max_val);   //取图像中的最大最小像素值
 	//cvNormalize(imgLoG,imgLoG,0,255,CV_MINMAX); //归一化处理
 
-	cvNamedWindow("Original Image",0);
+	cvNamedWindow("Original Image",1);
 	cvShowImage("Original Image",img);
-	cvNamedWindow("LoG Image",0);
+	cvNamedWindow("LoG Image",1);
 	cvShowImage("LoG Image",imgLoG);
 	cvWaitKey(0);
 	cvReleaseImage(&img);

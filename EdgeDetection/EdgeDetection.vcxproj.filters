@@ -66,6 +66,9 @@
     <ClCompile Include="square\sqaure_detection.cpp">
       <Filter>源文件\square</Filter>
     </ClCompile>
+    <ClCompile Include="edge\edge_trackbar.cpp">
+      <Filter>源文件\edge</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="detection.h">

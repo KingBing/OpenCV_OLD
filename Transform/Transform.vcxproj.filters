@@ -21,7 +21,10 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="透视矫正\rectify.cpp">
+    <ClCompile Include="perspective.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="透视矫正\rectAutoRectify.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

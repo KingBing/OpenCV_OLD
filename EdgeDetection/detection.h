@@ -11,12 +11,14 @@ void krisch(char* path);
 void histogram(char* path);
 void roberts(char *path);
 void laplace(char *path);
+void laplace_mat(char*path);
 void prewitt(char *path);
 void canny(char *path);
 void sobel(char *path);
 void log(char *path);
 
 int canny_trackbar(char*filename);//更详细地讲canny的用法,滑动条调节参数
+int edge_trackbar( char*path);//来自毛星云
 
 //直线检测
 int stdhoughlinedete(char *filename);
@@ -30,7 +32,7 @@ int square_detection();
 
 //二值化
 int binaryzation(char*path);
-int adaptiveThreshold();
+int adaptiveThreshold(char*path);
 
 //轮廓检测
 int contour1();

@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="algorithm.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="hog_svm_test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -34,6 +31,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="templeteMatch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="find_obj\find_obj.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SURF_Homography.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
