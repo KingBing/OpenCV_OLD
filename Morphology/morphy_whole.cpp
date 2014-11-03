@@ -51,7 +51,7 @@ static void ShowHelpText();
 //-----------------------------------【main( )函数】--------------------------------------------
 //		描述：控制台应用程序的入口函数，我们的程序从这里开始
 //-----------------------------------------------------------------------------------------------
-int morphy_whole( )
+int morphy_whole()
 {
 	//改变console字体颜色
 	system("color 2F");  
@@ -59,7 +59,7 @@ int morphy_whole( )
 	ShowHelpText();
 
 	//载入原图
-	g_srcImage = imread("lena.jpg");
+	g_srcImage = imread("zimu.jpg");
 	if( !g_srcImage.data ) { printf("Oh，no，读取srcImage错误~！ \n"); return false; }
 
 	//显示原始图
@@ -79,7 +79,7 @@ int morphy_whole( )
 	//分别为三个窗口创建滚动条
 	createTrackbar("迭代值", "【开运算/闭运算】",&g_nOpenCloseNum,g_nMaxIterationNum*2+1,on_OpenClose);
 	createTrackbar("迭代值", "【腐蚀/膨胀】",&g_nErodeDilateNum,g_nMaxIterationNum*2+1,on_ErodeDilate);
-	createTrackbar("迭代值", "【顶帽/黑帽】",&g_nTopBlackHatNum,g_nMaxIterationNum*2+1,on_TopBlackHat);
+	createTrackbar("迭代值", "【顶帽/黑帽】",&g_nTopBlackHatNum,g_nMaxIterationNum*3+1,on_TopBlackHat);
 
 	//轮询获取按键信息
 	while(1)

@@ -48,5 +48,6 @@ int oneDim(char *filename)
 	cvShowImage( "OriginalImg(Gray)" ,Image1);
 	cvShowImage( "Histogram" ,HistogramImage1);
 	cvWaitKey( 0 );
+	
 	return 0;
 } 

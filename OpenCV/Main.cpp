@@ -22,6 +22,8 @@ int main(int argc,char*argv[])
 	//CalcVariance() ;//计算协方差矩阵
 	//ReadSaveRGB();//读取图像的像素值并保存在txt文件中
     //visit_elem_Iplimage(imagename);
+	BrightContrastAdjust(imagename);//亮度和对比度调节
+
 	
 	
 	/*视频读写 */
@@ -43,7 +45,7 @@ int main(int argc,char*argv[])
 	/*设置图像ROI*/
 	//ROIimg(imagename);
 	//roi_mat(); 
-	roi_merge();
+	//roi_merge();
 	
 	/*颜色聚类*/
 	//color_cluster(imagename,2);

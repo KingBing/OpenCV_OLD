@@ -3,7 +3,7 @@
 
 int main()
 {
-	char*filename="lena.jpg";
+	char*filename="zimu.jpg";
 	//morphologyShow();
 	morphy_whole();
 

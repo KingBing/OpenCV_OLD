@@ -34,13 +34,13 @@ void contour2_trackbar(int pos)
 	cvReleaseImage(&pOutlineImage);
 }
 
-int contour2()
+int contour2(char*path)
 {	
 	const char *pstrWindowsSrcTitle = "原图(http://blog.csdn.net/MoreWindows)";
 	const char *pstrWindowsToolBarName = "二值化";
 
 	// 从文件中加载原图
-	IplImage *pSrcImage = cvLoadImage("lena.jpg", CV_LOAD_IMAGE_UNCHANGED);
+	IplImage *pSrcImage = cvLoadImage(path, CV_LOAD_IMAGE_UNCHANGED);
 	if (!pSrcImage)
 	{
 		printf("加载失败\n");

@@ -9,11 +9,11 @@ using namespace cv;
 int main(int argc, char* argv[])
 {
 	IplImage *src=cvLoadImage("video_12.JPG");
-	char*filename="(3)edgemerge.jpg";
+	char*filename="video_15.JPG";
 	//-------------------------------°æ±ﬂ‘µºÏ≤‚°ø------------------------------
 	//	√Ë ˆ:
 	//-------------------------------------------------------------------------
-	/*canny(filename);
+	canny(filename);
 	log(filename);
 	sobel(filename);
 	prewitt(filename);
@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
 	laplace(filename);
 	laplace_mat(filename);
 	canny_trackbar(filename);
-	edge_trackbar(filename);*/
+	edge_trackbar(filename);
 	//-------------------------------°æ÷±œﬂºÏ≤‚°ø------------------------------
 	//	√Ë ˆ:
 	//-------------------------------------------------------------------------
@@ -44,12 +44,12 @@ int main(int argc, char* argv[])
 	//	√Ë ˆ:
 	//-------------------------------------------------------------------------
 	//contour1();
-	//contour2();
+	//contour2(filename);
 
 	//--------------------------------°æ∂˛÷µªØ°ø------------------------------
 	//	√Ë ˆ:
 	//-------------------------------------------------------------------------
-	binaryzation(filename);
+	//binaryzation(filename);
 	//adaptiveThreshold(filename);
 	
 	return 0;

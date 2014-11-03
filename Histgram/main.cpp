@@ -6,11 +6,21 @@ using namespace cv;
 
 int main()
 {
-	char*filename="fruits.png";
-	
-	//EqualizeHist(filename);
-	calcDrawHist(filename);
+	char*filename="zimu.jpg";
 
+	//-----------------------------------【直方图绘制】------------------------------
+	//	描述:
+	//-------------------------------------------------------------------------
+	//calcDrawHist(filename);
+	//oneDim(filename);
+	mutiDim(filename);
+
+	//-----------------------------------【直方图均衡化】------------------------------
+	//	描述:
+	//-------------------------------------------------------------------------
+	//equalizeHist(filename);
+
+	
 
 	return 0;
 }

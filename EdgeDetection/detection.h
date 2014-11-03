@@ -36,7 +36,7 @@ int adaptiveThreshold(char*path);
 
 //ÂÖÀª¼ì²â
 int contour1();
-int contour2();
+int contour2(char*path);
 
 
 

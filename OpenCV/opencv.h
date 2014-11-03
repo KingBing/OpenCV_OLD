@@ -13,6 +13,7 @@ struct Localtion{
 int rgb2hsv(char*filename); //颜色空间转换
 int CalcVariance() ;//计算协方差矩阵
 int ReadSaveRGB();
+int BrightContrastAdjust(char*path );//亮度和对比度调节
 
 
 

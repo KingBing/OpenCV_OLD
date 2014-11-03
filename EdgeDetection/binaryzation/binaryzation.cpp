@@ -4,11 +4,10 @@
 #include <opencv2/opencv.hpp>
 using namespace std;
 
-//#pragma comment(linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"")
 
 IplImage *g_pGrayImage = NULL;
 IplImage *g_pBinaryImage = NULL;
-const char *pstrWindowsBinaryTitle = "二值图(http://blog.csdn.net/MoreWindows)";
+const char *pstrWindowsBinaryTitle = "二值图";
 
 void binaryzation_trackbar(int pos)
 {
@@ -20,15 +19,19 @@ void binaryzation_trackbar(int pos)
 
 int binaryzation(char*path)
 {	
-	const char *pstrWindowsSrcTitle = "原图(http://blog.csdn.net/MoreWindows)";
+	const char *pstrWindowsSrcTitle = "原图";
 	const char *pstrWindowsToolBarName = "二值图阈值";
 
 	// 从文件中加载原图
 	IplImage *pSrcImage = cvLoadImage(path, CV_LOAD_IMAGE_UNCHANGED);
 
-	// 转为灰度图
-	g_pGrayImage =  cvCreateImage(cvGetSize(pSrcImage), IPL_DEPTH_8U, 1);
-	cvCvtColor(pSrcImage, g_pGrayImage, CV_BGR2GRAY);
+	// 如果不是灰度图则转为灰度图
+	if (pSrcImage->nChannels!=1)
+	{
+		g_pGrayImage =  cvCreateImage(cvGetSize(pSrcImage), IPL_DEPTH_8U, 1);
+		cvCvtColor(pSrcImage, g_pGrayImage, CV_BGR2GRAY);
+	}
+
 
 	// 创建二值图
 	g_pBinaryImage = cvCreateImage(cvGetSize(g_pGrayImage), IPL_DEPTH_8U, 1);

@@ -76,12 +76,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="foundation\BrightContrastAdjust.cpp" />
     <ClCompile Include="foundation\CalcCovariance.cpp" />
+    <ClCompile Include="foundation\ReadSaveRGB.cpp" />
     <ClCompile Include="foundation\rgb2hsv.cpp" />
     <ClCompile Include="foundation\visit_elem_iplimag.cpp" />
     <ClCompile Include="foundation\visit_elem_mat.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="ReadSaveRGB.cpp" />
     <ClCompile Include="ROI\roi.cpp" />
     <ClCompile Include="ROI\roi_mat.cpp" />
     <ClCompile Include="ROI\roi_merge.cpp" />
@@ -97,13 +98,11 @@
     <ClCompile Include="视频读取和写入\images_to_video.cpp" />
     <ClCompile Include="视频读取和写入\read_video_info.cpp" />
     <ClCompile Include="视频读取和写入\read_write_video.cpp" />
-    <ClCompile Include="透视矫正\rectify.cpp" />
     <ClCompile Include="通道分离和合并\chanel_split_merge.cpp" />
     <ClCompile Include="颜色聚类\color_cluster.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="opencv.h" />
-    <ClInclude Include="透视矫正\rectify.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -19,9 +19,6 @@
     <Filter Include="源文件\Source\test">
       <UniqueIdentifier>{724dbe2a-cacc-4f3b-914a-743f82453e47}</UniqueIdentifier>
     </Filter>
-    <Filter Include="源文件\Source\透视矫正">
-      <UniqueIdentifier>{c8b84568-df7c-4da1-bc50-39377e1565f2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\Source\人脸检测和行人检测">
       <UniqueIdentifier>{d1599c25-b7ba-49c3-adf7-a166509f0d8f}</UniqueIdentifier>
     </Filter>
@@ -81,9 +78,6 @@
     <ClCompile Include="人脸检测和行人检测\walker_detection.cpp">
       <Filter>源文件\Source\人脸检测和行人检测</Filter>
     </ClCompile>
-    <ClCompile Include="透视矫正\rectify.cpp">
-      <Filter>源文件\Source\透视矫正</Filter>
-    </ClCompile>
     <ClCompile Include="几何变换\image_rotate.cpp">
       <Filter>源文件\Source\图像旋转</Filter>
     </ClCompile>
@@ -117,20 +111,20 @@
     <ClCompile Include="ROI\roi_mat.cpp">
       <Filter>源文件\Source\ROI</Filter>
     </ClCompile>
-    <ClCompile Include="ReadSaveRGB.cpp">
-      <Filter>源文件\Source\基础</Filter>
-    </ClCompile>
     <ClCompile Include="图像缩放\resize.cpp">
       <Filter>源文件\Source\图像缩放</Filter>
     </ClCompile>
     <ClCompile Include="ROI\roi_merge.cpp">
       <Filter>源文件\Source\ROI</Filter>
     </ClCompile>
+    <ClCompile Include="foundation\BrightContrastAdjust.cpp">
+      <Filter>源文件\Source\基础</Filter>
+    </ClCompile>
+    <ClCompile Include="foundation\ReadSaveRGB.cpp">
+      <Filter>源文件\Source\基础</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="透视矫正\rectify.h">
-      <Filter>源文件\Source\透视矫正</Filter>
-    </ClInclude>
     <ClInclude Include="opencv.h">
       <Filter>头文件</Filter>
     </ClInclude>

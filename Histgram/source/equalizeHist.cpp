@@ -1,9 +1,14 @@
-//通道分离和合并
+//-----------------------------------【函数】------------------------------
+//	描述:直方图均衡化，
+//  说明:opencv的直方图均衡化函数cvEqualizeHist()针对的都是单通道，所以对于彩色图像要先进行通道分离，
+//		  对单通道图像分别进行均衡化，最后再合并。		
+//  参考：http://blog.csdn.net/sundy_2004/article/details/7259614
+//-------------------------------------------------------------------------
 
 #include <cv.h>
 #include <highgui.h>
 
-int EqualizeHist(char*path)
+int equalizeHist(char*path)
 {
 	int i;
 	IplImage* src = cvLoadImage( path, 1 );
