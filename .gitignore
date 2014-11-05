@@ -1,0 +1,13 @@
+/Debug
+/ipch
+/Algorithm/Debug
+/EdgeDetection/Debug
+/FilterSmooth/Debug
+/Histgram/Debug
+/Morphology/Debug
+/OpenCV/Debug
+/Transform/Debug
+/OpenCV.sdf
+
+#ignore image
+*.[oa],*.jpg,*bmp,*png
