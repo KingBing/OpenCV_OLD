@@ -34,9 +34,6 @@
     <Filter Include="源文件\Source\视频读取和写入">
       <UniqueIdentifier>{6fe37752-9a13-4843-9f74-a24cb6d68124}</UniqueIdentifier>
     </Filter>
-    <Filter Include="源文件\Source\图像旋转">
-      <UniqueIdentifier>{e5c0b5b9-afb9-444b-95b8-5e7b5a4bbf9d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\Source\通道分离和合并">
       <UniqueIdentifier>{a1c57915-5623-4c36-a7c7-56669971979d}</UniqueIdentifier>
     </Filter>
@@ -45,9 +42,6 @@
     </Filter>
     <Filter Include="源文件\Source\基础">
       <UniqueIdentifier>{b33e2c1a-d99b-40d4-8bba-4059d65d1172}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\Source\图像缩放">
-      <UniqueIdentifier>{6b123348-304b-4033-b6ec-2d13a1201a53}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -78,20 +72,11 @@
     <ClCompile Include="人脸检测和行人检测\walker_detection.cpp">
       <Filter>源文件\Source\人脸检测和行人检测</Filter>
     </ClCompile>
-    <ClCompile Include="几何变换\image_rotate.cpp">
-      <Filter>源文件\Source\图像旋转</Filter>
-    </ClCompile>
     <ClCompile Include="通道分离和合并\chanel_split_merge.cpp">
       <Filter>源文件\Source\通道分离和合并</Filter>
     </ClCompile>
     <ClCompile Include="xml读写\xml_read_write.cpp">
       <Filter>源文件\Source\xml读写</Filter>
-    </ClCompile>
-    <ClCompile Include="foundation\visit_elem_iplimag.cpp">
-      <Filter>源文件\Source\基础</Filter>
-    </ClCompile>
-    <ClCompile Include="foundation\visit_elem_mat.cpp">
-      <Filter>源文件\Source\基础</Filter>
     </ClCompile>
     <ClCompile Include="视频读取和写入\read_video_info.cpp">
       <Filter>源文件\Source\视频读取和写入</Filter>
@@ -99,28 +84,37 @@
     <ClCompile Include="视频读取和写入\images_to_video.cpp">
       <Filter>源文件\Source\视频读取和写入</Filter>
     </ClCompile>
-    <ClCompile Include="foundation\rgb2hsv.cpp">
-      <Filter>源文件\Source\基础</Filter>
-    </ClCompile>
-    <ClCompile Include="图像缩放\inter_value.cpp">
-      <Filter>源文件\Source\图像缩放</Filter>
-    </ClCompile>
-    <ClCompile Include="foundation\CalcCovariance.cpp">
-      <Filter>源文件\Source\基础</Filter>
-    </ClCompile>
     <ClCompile Include="ROI\roi_mat.cpp">
       <Filter>源文件\Source\ROI</Filter>
-    </ClCompile>
-    <ClCompile Include="图像缩放\resize.cpp">
-      <Filter>源文件\Source\图像缩放</Filter>
     </ClCompile>
     <ClCompile Include="ROI\roi_merge.cpp">
       <Filter>源文件\Source\ROI</Filter>
     </ClCompile>
-    <ClCompile Include="foundation\BrightContrastAdjust.cpp">
+    <ClCompile Include="基础\BrightContrastAdjust.cpp">
       <Filter>源文件\Source\基础</Filter>
     </ClCompile>
-    <ClCompile Include="foundation\ReadSaveRGB.cpp">
+    <ClCompile Include="基础\CalcCovariance.cpp">
+      <Filter>源文件\Source\基础</Filter>
+    </ClCompile>
+    <ClCompile Include="基础\CompareImg.cpp">
+      <Filter>源文件\Source\基础</Filter>
+    </ClCompile>
+    <ClCompile Include="基础\CreateSaveCopyImg.cpp">
+      <Filter>源文件\Source\基础</Filter>
+    </ClCompile>
+    <ClCompile Include="基础\LoadShowImg.cpp">
+      <Filter>源文件\Source\基础</Filter>
+    </ClCompile>
+    <ClCompile Include="基础\ReadSaveRGB.cpp">
+      <Filter>源文件\Source\基础</Filter>
+    </ClCompile>
+    <ClCompile Include="基础\rgb2hsv.cpp">
+      <Filter>源文件\Source\基础</Filter>
+    </ClCompile>
+    <ClCompile Include="基础\visit_elem_iplimag.cpp">
+      <Filter>源文件\Source\基础</Filter>
+    </ClCompile>
+    <ClCompile Include="基础\visit_elem_mat.cpp">
       <Filter>源文件\Source\基础</Filter>
     </ClCompile>
   </ItemGroup>

@@ -76,12 +76,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="foundation\BrightContrastAdjust.cpp" />
-    <ClCompile Include="foundation\CalcCovariance.cpp" />
-    <ClCompile Include="foundation\ReadSaveRGB.cpp" />
-    <ClCompile Include="foundation\rgb2hsv.cpp" />
-    <ClCompile Include="foundation\visit_elem_iplimag.cpp" />
-    <ClCompile Include="foundation\visit_elem_mat.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="ROI\roi.cpp" />
     <ClCompile Include="ROI\roi_mat.cpp" />
@@ -92,9 +86,15 @@
     <ClCompile Include="二值化\Threshold.cpp" />
     <ClCompile Include="人脸检测和行人检测\face_detection.cpp" />
     <ClCompile Include="人脸检测和行人检测\walker_detection.cpp" />
-    <ClCompile Include="几何变换\image_rotate.cpp" />
-    <ClCompile Include="图像缩放\inter_value.cpp" />
-    <ClCompile Include="图像缩放\resize.cpp" />
+    <ClCompile Include="基础\BrightContrastAdjust.cpp" />
+    <ClCompile Include="基础\CalcCovariance.cpp" />
+    <ClCompile Include="基础\CompareImg.cpp" />
+    <ClCompile Include="基础\CreateSaveCopyImg.cpp" />
+    <ClCompile Include="基础\LoadShowImg.cpp" />
+    <ClCompile Include="基础\ReadSaveRGB.cpp" />
+    <ClCompile Include="基础\rgb2hsv.cpp" />
+    <ClCompile Include="基础\visit_elem_iplimag.cpp" />
+    <ClCompile Include="基础\visit_elem_mat.cpp" />
     <ClCompile Include="视频读取和写入\images_to_video.cpp" />
     <ClCompile Include="视频读取和写入\read_video_info.cpp" />
     <ClCompile Include="视频读取和写入\read_write_video.cpp" />

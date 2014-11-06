@@ -1,10 +1,12 @@
+//histgram功能的主入口
+
 #include "histgram.h"
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 
 using namespace cv;
 
-int main()
+int histgram()
 {
 	char*filename="zimu.jpg";
 

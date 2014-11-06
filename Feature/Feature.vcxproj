@@ -81,6 +81,12 @@
     <ClCompile Include="corner\surf_feature.cpp" />
     <ClCompile Include="corner\surf_feature_opencv.cpp" />
     <ClCompile Include="corner\susan_corner_detect.cpp" />
+    <ClCompile Include="histgram\calcDrawHist.cpp" />
+    <ClCompile Include="histgram\calcHistDistance.cpp" />
+    <ClCompile Include="histgram\equalizeHist.cpp" />
+    <ClCompile Include="histgram\histgram_main.cpp" />
+    <ClCompile Include="histgram\mutiDim.cpp" />
+    <ClCompile Include="histgram\oneDim.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
