@@ -1,8 +1,12 @@
+//来自于：http://blog.csdn.net/augusdi/article/details/9005352
+
 #include <opencv2/core/core.hpp> 
 #include <opencv2/features2d/features2d.hpp>
 #include <opencv2/highgui/highgui.hpp>
+#include <opencv2/objdetect/objdetect.hpp>  //HogDescriptor描述子所在的头文件
 #include <iostream>
 
+using namespace cv;
 
 int hog_feature()
 {
@@ -15,7 +19,8 @@ int hog_feature()
 
 	sift("1.jpg");  //这是我改写的sift...
 	for (int i=0;i<kp.size();i++) 
-	{  //这个循环就是我用来提前特征点附近3*3区域的梯度信息统计
+	{  
+		//这个循环就是我用来提前特征点附近3*3区域的梯度信息统计
 		printf("keypoint %d at %f %f\n",i,kp[i].first,kp[i].second);
 		if (kp[i].first==picw) 
 			kp[i].first--;
@@ -39,7 +44,8 @@ int hog_feature()
 		return -1; 
 	double maxx=0;
 	for (int i=0;i<9;i++) if (maxx<res[i]) maxx=res[i];
-	for (int i=0;i<9;i++) cvRectangle(respic, cvPoint(150+51*i,(maxx-res[i])/maxx*(352-77)+77),
+	for (int i=0;i<9;i++)
+		cvRectangle(respic, cvPoint(150+51*i,(maxx-res[i])/maxx*(352-77)+77),
 		cvPoint(201+51*i,351), CV_RGB(0, 0, 0),
 		1, 8, 0);
 	CvFont font;

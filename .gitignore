@@ -11,3 +11,4 @@
 
 #ignore image
 *.[oa],*.jpg,*bmp,*png
+*.wmv,*.avi,*.AVI

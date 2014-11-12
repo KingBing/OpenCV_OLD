@@ -1,3 +1,9 @@
+/*
+ *功能：形态学膨胀/腐蚀，开/闭，角点检测，边缘检测
+ *来自：
+ *Info:[11/8/2014 jmy]
+ */
+
 #include <stdio.h>
 #include <opencv2\core\core.hpp>
 #include <opencv2\highgui\highgui.hpp>

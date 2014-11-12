@@ -27,6 +27,9 @@
     <ClCompile Include="morphy_whole.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="cvthin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="morphology.h">

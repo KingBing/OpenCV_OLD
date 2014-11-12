@@ -3,11 +3,11 @@
 
 int main()
 {
-	char*filename="zimu.jpg";
+	char*filename="morphy.jpg";
 	//morphologyShow();
-	morphy_whole();
+	//morphy_whole();
 
-
+	thin(filename);
 	return 0;
 
 }

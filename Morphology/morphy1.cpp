@@ -1,3 +1,5 @@
+// 功能：形态学的开/闭，膨胀/腐蚀运算
+
 #include "cv.h"  
 #include "highgui.h"  
 #include <stdlib.h>  

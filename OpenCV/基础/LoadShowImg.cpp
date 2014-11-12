@@ -1,4 +1,6 @@
-#include"../test.h";
+#include"../opencv.h";
+
+using namespace std;
 
 void Load_Show_Img(char* filepath)
 {

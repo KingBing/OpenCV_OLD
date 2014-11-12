@@ -14,7 +14,7 @@ int main(int argc,char*argv[])
 	//}
 	
 	
-	//char*videoname="PicVideo//test_o2.mp4";
+	char*videoname="PicVideo//test_o2.mp4";
 	char*imagename="PicVideo//fruits.png";
 		
 	/*基础 */
@@ -22,12 +22,12 @@ int main(int argc,char*argv[])
 	//CalcVariance() ;//计算协方差矩阵
 	//ReadSaveRGB();//读取图像的像素值并保存在txt文件中
     //visit_elem_Iplimage(imagename);
-	BrightContrastAdjust(imagename);//亮度和对比度调节
+	//BrightContrastAdjust(imagename);//亮度和对比度调节
 
 	
 	
 	/*视频读写 */
-    //read_write_video(videoname,"out.wmv");
+    read_write_video(videoname,"out.wmv");
 	//images2video();
 	//read_video_info(argc,argv);
 
@@ -35,7 +35,7 @@ int main(int argc,char*argv[])
 	/*人脸识别 */
 	//face_detection(imagename);
 	
-	/*行人识别	 */
+	/*行人识别 */
 	//walker_detection(imagename);
 	
 	/*灰度图像二值化*/
@@ -49,14 +49,7 @@ int main(int argc,char*argv[])
 	
 	/*颜色聚类*/
 	//color_cluster(imagename,2);
-	
-	
-	/*图像旋转*/
-	//rotate_nearest_neibgour(imagename);
-
-	/*透视矫正*/
-	//rectify();
-	
+		
 	/*通道分离和合并*/
 	//channel_split_merge();
 
@@ -68,9 +61,6 @@ int main(int argc,char*argv[])
 	/*访问和操作像素的值*/
 	//visit_elem_Iplimage(imagename);
 	//visit_elem_Mat(imagename);
-
-	/*图像缩放（插值）*/
-	//inter_value(imagename);
 
 	getchar();
 

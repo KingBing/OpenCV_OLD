@@ -9,4 +9,11 @@ int surf_feature();
 int susan_corner_dete(char*filename);  
 int surf_feature_opencv();//该程序演示了模板匹配
 
+//----------------------------------【Hog特征】-------------------------------
+
+int hog_feature(); //未调通
+
+//-----------------------------【garbor特征】-----------------------------
+int garbor(char*filename);
+
 

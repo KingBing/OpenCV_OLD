@@ -7,8 +7,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Detection", "EdgeDetection\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Algorithm", "Algorithm\Algorithm.vcxproj", "{F59D96A9-ADD0-470B-9A55-070F96805FFC}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Histgram", "Histgram\Histgram.vcxproj", "{D0868D4F-1DCA-4EE9-BC86-63776A8B4786}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Morphology", "Morphology\Morphology.vcxproj", "{BBABB727-E61E-4AD9-99EA-4542A8BA11AE}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Feature", "Feature\Feature.vcxproj", "{7F71D238-A3B5-4924-8A68-72F75AAA0609}"
@@ -16,6 +14,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Transform", "Transform\Transform.vcxproj", "{6CCFAD49-43C6-4C58-ABDB-21E0759ABF31}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FilterSmooth", "FilterSmooth\FilterSmooth.vcxproj", "{C41CBFC2-FAA2-43A7-A64B-A03BD45B934F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Track", "Track\Track.vcxproj", "{6554DA57-1312-4258-82A0-0B9B5399C992}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,6 @@ Global
 		{F59D96A9-ADD0-470B-9A55-070F96805FFC}.Debug|Win32.Build.0 = Debug|Win32
 		{F59D96A9-ADD0-470B-9A55-070F96805FFC}.Release|Win32.ActiveCfg = Release|Win32
 		{F59D96A9-ADD0-470B-9A55-070F96805FFC}.Release|Win32.Build.0 = Release|Win32
-		{D0868D4F-1DCA-4EE9-BC86-63776A8B4786}.Debug|Win32.ActiveCfg = Debug|Win32
-		{D0868D4F-1DCA-4EE9-BC86-63776A8B4786}.Debug|Win32.Build.0 = Debug|Win32
-		{D0868D4F-1DCA-4EE9-BC86-63776A8B4786}.Release|Win32.ActiveCfg = Release|Win32
-		{D0868D4F-1DCA-4EE9-BC86-63776A8B4786}.Release|Win32.Build.0 = Release|Win32
 		{BBABB727-E61E-4AD9-99EA-4542A8BA11AE}.Debug|Win32.ActiveCfg = Debug|Win32
 		{BBABB727-E61E-4AD9-99EA-4542A8BA11AE}.Debug|Win32.Build.0 = Debug|Win32
 		{BBABB727-E61E-4AD9-99EA-4542A8BA11AE}.Release|Win32.ActiveCfg = Release|Win32
@@ -55,6 +51,10 @@ Global
 		{C41CBFC2-FAA2-43A7-A64B-A03BD45B934F}.Debug|Win32.Build.0 = Debug|Win32
 		{C41CBFC2-FAA2-43A7-A64B-A03BD45B934F}.Release|Win32.ActiveCfg = Release|Win32
 		{C41CBFC2-FAA2-43A7-A64B-A03BD45B934F}.Release|Win32.Build.0 = Release|Win32
+		{6554DA57-1312-4258-82A0-0B9B5399C992}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6554DA57-1312-4258-82A0-0B9B5399C992}.Debug|Win32.Build.0 = Debug|Win32
+		{6554DA57-1312-4258-82A0-0B9B5399C992}.Release|Win32.ActiveCfg = Release|Win32
+		{6554DA57-1312-4258-82A0-0B9B5399C992}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

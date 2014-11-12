@@ -11,3 +11,6 @@ int morphy_edge();//±ßÔµ¼ì²â
 int morphy_corner();//½Çµã¼ì²â
 int morphy_apply_location();//¶¨Î»
 
+//------------------------------------Í¼ÏñÏ¸»¯-----------------------------
+int thin(char*input);
+
