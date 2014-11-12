@@ -1,6 +1,6 @@
 #include "opencv.h"
 
-int main(int argc,char*argv[])
+int main1(int argc,char*argv[])
 {
 	//读取文件夹内的指定格式的所有文件
 	//char filename[50];
@@ -27,7 +27,7 @@ int main(int argc,char*argv[])
 	
 	
 	/*视频读写 */
-    read_write_video(videoname,"out.wmv");
+    //read_write_video(videoname,"out.wmv");
 	//images2video();
 	//read_video_info(argc,argv);
 

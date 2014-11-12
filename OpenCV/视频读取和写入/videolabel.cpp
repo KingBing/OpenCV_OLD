@@ -1,12 +1,18 @@
 //Tools for Labeling Video
 //Coded by L. Wei
 //Date: 9/4/2013
+/*
+ *功能：视频标注
+ *来自：http://blog.csdn.net/xiaowei_cqu/article/details/8778976
+ *Info:[11/12/2014 jmy]
+ */
 
 #include <opencv2/opencv.hpp>
 #include <iostream>
 #include <string>
 #include <vector>
 #include <fstream>
+
 using namespace std;
 using namespace cv;
 
@@ -79,7 +85,7 @@ int main(){
 	namedWindow("Video");
 	ofstream outfile("a.txt");
 	help();
-	VideoCapture capture("a.avi");
+	VideoCapture capture("PicVideo\test_o2.mp4");
 	capture>>img_original;
 	img_original.copyTo(img_drawing);
 	for(vector<Rect>::iterator it=biaozhu_boxs.begin();

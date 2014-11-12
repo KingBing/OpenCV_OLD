@@ -117,6 +117,9 @@
     <ClCompile Include="基础\visit_elem_mat.cpp">
       <Filter>源文件\Source\基础</Filter>
     </ClCompile>
+    <ClCompile Include="视频读取和写入\videolabel.cpp">
+      <Filter>源文件\Source\视频读取和写入</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="opencv.h">
