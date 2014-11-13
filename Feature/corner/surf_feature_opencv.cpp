@@ -32,6 +32,7 @@ void surf_help()
 // define whether to use approximate nearest-neighbor search
 #define USE_FLANN
 IplImage* image = 0;
+
 double compareSURFDescriptors( const float* d1, const float* d2, double best, int length )
 {
     double total_cost = 0;
@@ -48,6 +49,7 @@ double compareSURFDescriptors( const float* d1, const float* d2, double best, in
     }
     return total_cost;
 }
+
 int naiveNearestNeighbor( const float* vec, int laplacian,
                       const CvSeq* model_keypoints,
                       const CvSeq* model_descriptors )
@@ -202,8 +204,8 @@ int locatePlanarObject( const CvSeq* objectKeypoints, const CvSeq* objectDescrip
 int surf_feature_opencv()	
 {
 	//物体(object)和场景(scene)的图像向来源
-    const char* object_filename = "./PicVideo/box.png";
-    const char* scene_filename ="./PicVideo/box_in_scene.png";
+    const char* object_filename = "./samples/box.png";
+    const char* scene_filename ="./samples/box_in_scene.png";
 	surf_help();   
 	IplImage* object = cvLoadImage( object_filename, CV_LOAD_IMAGE_GRAYSCALE );
     IplImage* image = cvLoadImage( scene_filename, CV_LOAD_IMAGE_GRAYSCALE );

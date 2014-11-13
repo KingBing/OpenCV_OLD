@@ -14,10 +14,10 @@ int fast_corner_detect(char*filename)
 
 	cv::drawKeypoints (grayimage,keypoints,srcimage,cv::Scalar::all(255),cv::DrawMatchesFlags::DRAW_OVER_OUTIMG); 
 	
-	imwrite("fast_corner.jpg",srcimage);
+	//imwrite("fast_corner.jpg",srcimage);
 	
-	/*namedWindow("FastCornerDete",1);
-	imshow("FastCornerDete",srcimage);*/
+	namedWindow("FastCornerDete",1);
+	imshow("FastCornerDete",srcimage);
 
 	return 0;
 }

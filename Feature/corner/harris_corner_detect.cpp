@@ -2,8 +2,7 @@
 
 using namespace cv;
 
-
-int harris_corner_dete(char*filename)
+int harris_corner_detect(char*filename)
 {
 	cv::Mat  image, image1 = cv::imread (filename);
 	//灰度变换
@@ -27,7 +26,7 @@ int harris_corner_dete(char*filename)
 }
 
 //其实就是opencv中使用的harris角点检测
-int harris_corner_dete_improve(char*filename)
+int harris_corner_detect_improve(char*filename)
 {
 	cv::Mat  grayimage, srcimage = cv::imread (filename);  
 	//灰度变换  

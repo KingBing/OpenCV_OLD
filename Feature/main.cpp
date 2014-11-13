@@ -5,8 +5,17 @@
 
 int main()
 {
+	char*filename="samples/box.png";
+	//garbor(filename);
+	//-----------------------------------°æΩ«µ„ºÏ≤‚∫Õ∆•≈‰°ø-----------------------------
+	//surf_feature();
+	//sift_feature();
+	//surf_feature_opencv();
+	//-----------------------------------°æΩ«µ„ºÏ≤‚°ø-----------------------------
+	//harris_corner_detect(filename);
+	//susan_corner_detect(filename);
+	fast_corner_detect(filename);
 
-	garbor("garbor.bmp");
 	getchar();
 	return 0;
 }

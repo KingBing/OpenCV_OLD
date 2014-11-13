@@ -8,7 +8,7 @@
 
 #define max_corners 1000  
 
-int susan_corner_dete(char*filename)  
+int susan_corner_detect(char*filename)  
 {  
 	int cornerCount=max_corners;  
 	CvPoint2D32f corners[max_corners];  

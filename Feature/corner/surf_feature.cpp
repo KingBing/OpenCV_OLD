@@ -16,12 +16,12 @@ void readme();
 
 int surf_feature()
 {
-	Mat img_1=imread("./PicVideo/box.png",CV_LOAD_IMAGE_GRAYSCALE);//宏定义时CV_LOAD_IMAGE_GRAYSCALE=0，也就是读取灰度图像
-	Mat img_2=imread("./PicVideo/box_in_scene.png",CV_LOAD_IMAGE_GRAYSCALE);//一定要记得这里路径的斜线方向，这与Matlab里面是相反的
+	Mat img_1=imread("./samples/box.png",CV_LOAD_IMAGE_GRAYSCALE);//宏定义时CV_LOAD_IMAGE_GRAYSCALE=0，也就是读取灰度图像
+	Mat img_2=imread("./samples/box_in_scene.png",CV_LOAD_IMAGE_GRAYSCALE);//一定要记得这里路径的斜线方向，这与Matlab里面是相反的
 
 	if(!img_1.data || !img_2.data)//如果数据为空
 	{
-		cout<<"opencv error"<<endl;
+		cout<<"opencv error:cann't open the image!"<<endl;
 		return -1;
 	}
 	cout<<"open right"<<endl;

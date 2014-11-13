@@ -19,6 +19,9 @@
     <Filter Include="源文件\histgram">
       <UniqueIdentifier>{2b5b056e-425f-4e7e-9b78-06cf969523e1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\garbor">
+      <UniqueIdentifier>{9d74e2a6-2cf0-41d4-865b-26a28792fd20}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="corner\sift_feature.cpp">
@@ -62,12 +65,6 @@
     </ClCompile>
     <ClCompile Include="histgram\histgram_main.cpp">
       <Filter>源文件\histgram</Filter>
-    </ClCompile>
-    <ClCompile Include="cvgabor.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="garbor.cpp">
-      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
