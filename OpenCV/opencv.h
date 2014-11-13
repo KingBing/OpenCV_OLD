@@ -28,7 +28,6 @@ void visit_elem_Mat(char*picname);
 
 //»À¡≥ºÏ≤‚
 int face_detection(char*filename);
-
 //––»ÀºÏ≤‚
 int walker_detection(char*filename);
 

@@ -4,6 +4,7 @@
 /*
  *功能：视频标注
  *来自：http://blog.csdn.net/xiaowei_cqu/article/details/8778976
+ *Satus:程序有一些问题
  *Info:[11/12/2014 jmy]
  */
 
@@ -42,107 +43,111 @@ static void onMouse( int event, int x, int y, int, void* )
 {
 	switch(event)
 	{
-	case CV_EVENT_LBUTTONDOWN: 
-		//the left up point of the rect
-		is_drawing=true;
-		drawing_box.x=x;
-		drawing_box.y=y;
-		break;
-	case CV_EVENT_MOUSEMOVE:
-		//adjust the rect (use color blue for moving)
-		if(is_drawing){
-			drawing_box.width=x-drawing_box.x;
-			drawing_box.height=y-drawing_box.y;
-			img_original.copyTo(img_drawing);
-			for(vector<Rect>::iterator it=biaozhu_boxs.begin();
-				it!=biaozhu_boxs.end();++it){
+		case CV_EVENT_LBUTTONDOWN: 
+			//the left up point of the rect
+			is_drawing=true;
+			drawing_box.x=x;
+			drawing_box.y=y;
+			break;
+		case CV_EVENT_MOUSEMOVE:
+			//adjust the rect (use color blue for moving)
+			if(is_drawing)
+			{
+				drawing_box.width=x-drawing_box.x;
+				drawing_box.height=y-drawing_box.y;
+				img_original.copyTo(img_drawing);
+				for(vector<Rect>::iterator it=biaozhu_boxs.begin();	it!=biaozhu_boxs.end();++it)
+				{
 					rectangle(img_drawing,(*it),Scalar(0,255,0));
+				}
+				rectangle(img_drawing,drawing_box,Scalar(255,0,0));
 			}
-			rectangle(img_drawing,drawing_box,Scalar(255,0,0));
-		}
-		break;
-	case CV_EVENT_LBUTTONUP:
-		//finish drawing the rect (use color green for finish)
-		if(is_drawing){
-			drawing_box.width=x-drawing_box.x;
-			drawing_box.height=y-drawing_box.y;
-			img_original.copyTo(img_drawing);
-			for(vector<Rect>::iterator it=biaozhu_boxs.begin();
-				it!=biaozhu_boxs.end();++it){
+			break;
+		case CV_EVENT_LBUTTONUP:
+			//finish drawing the rect (use color green for finish)
+			if(is_drawing)
+			{
+				drawing_box.width=x-drawing_box.x;
+				drawing_box.height=y-drawing_box.y;
+				img_original.copyTo(img_drawing);
+				for(vector<Rect>::iterator it=biaozhu_boxs.begin();	it!=biaozhu_boxs.end();++it)
+				{
 					rectangle(img_drawing,(*it),Scalar(0,255,0));
+				}
+				rectangle(img_drawing,drawing_box,Scalar(0,255,0));
+				biaozhu_boxs.push_back(drawing_box);
 			}
-			rectangle(img_drawing,drawing_box,Scalar(0,255,0));
-			biaozhu_boxs.push_back(drawing_box);
-		}
-		is_drawing=false;
-		break;
+			is_drawing=false;
+			break;
 	}
 	imshow("Video",img_drawing);
 	return;
 }
 
-int main(){
-	namedWindow("Video");
-	ofstream outfile("a.txt");
+int main()
+{
 	help();
-	VideoCapture capture("PicVideo\test_o2.mp4");
+	namedWindow("Video");
+	ofstream outfile("video_label.txt");
+	
+	VideoCapture capture("PicVideo/video/test_o2.mp4");
 	capture>>img_original;
 	img_original.copyTo(img_drawing);
-	for(vector<Rect>::iterator it=biaozhu_boxs.begin();
-		it!=biaozhu_boxs.end();++it){
-			rectangle(img_drawing,(*it),Scalar(0,255,0));
+	for(vector<Rect>::iterator it=biaozhu_boxs.begin();it!=biaozhu_boxs.end();++it)
+	{
+	     rectangle(img_drawing,(*it),Scalar(0,255,0));
 	}
 	imshow("Video",img_original);
 	setMouseCallback( "Video", onMouse, 0 );
 
 	int frame_counter=0;
-
-	while(1){
+	while(1)
+	{
 		int c=waitKey(0);
-		if( (c & 255) == 27 )
-		{
+		if( (c & 255) == 27 ){
 			cout << "Exiting ...\n";
 			break;
 		}
 		switch((char)c)
 		{
-		case 'n':
-			//read the next frame
-			++frame_counter;
-			capture>>img_original;
-			if(img_original.empty()){
-				cout<<"\nVideo Finished!"<<endl;
-				return 0;
-			}
+			case 'n':
+				//read the next frame
+				++frame_counter;
+				capture>>img_original;
+				if(img_original.empty())
+				{
+					cout<<"\nVideo Finished!"<<endl;
+					return 0;
+				}
 
-			img_original.copyTo(img_drawing);
-			//save all of the labeling rects
-			for(vector<Rect>::iterator it=biaozhu_boxs.begin();
-				it!=biaozhu_boxs.end();++it){
+				img_original.copyTo(img_drawing);
+				//save all of the labeling rects
+				for(vector<Rect>::iterator it=biaozhu_boxs.begin();	it!=biaozhu_boxs.end();++it)
+				{
 					rectangle(img_drawing,(*it),Scalar(0,255,0));
-					outfile<<frame_counter<<" "<<(*it).x<<" "
-						<<(*it).y<<" "<<(*it).width<<" "
-						<<(*it).height<<endl;
-			}
-			break;
-		case 'z':
-			//undo the latest labeling
-			if(!biaozhu_boxs.empty()){
-				vector<Rect>::iterator it_end=biaozhu_boxs.end();
-				--it_end;
-				biaozhu_boxs.erase(it_end);
-			}
-			img_original.copyTo(img_drawing);
-			for(vector<Rect>::iterator it=biaozhu_boxs.begin();
-				it!=biaozhu_boxs.end();++it){
+					outfile<<frame_counter<<" "
+						    <<(*it).x<<" "<<(*it).y<<" "<<(*it).width<<" "<<(*it).height<<endl;
+				}
+				break;
+			case 'z':
+				//undo the latest labeling
+				if(!biaozhu_boxs.empty())
+				{
+					vector<Rect>::iterator it_end=biaozhu_boxs.end();
+					--it_end;
+					biaozhu_boxs.erase(it_end);
+				}
+				img_original.copyTo(img_drawing);
+				for(vector<Rect>::iterator it=biaozhu_boxs.begin();	it!=biaozhu_boxs.end();++it)
+				{
 					rectangle(img_drawing,(*it),Scalar(0,255,0));
-			}
-			break;
+				}
+				break;
 
-		case 'c':
-			//clear all the rects on the image
-			biaozhu_boxs.clear();
-			img_original.copyTo(img_drawing);
+			case 'c':
+				//clear all the rects on the image
+				biaozhu_boxs.clear();
+				img_original.copyTo(img_drawing);
 		}
 
 		imshow("Video",img_drawing);

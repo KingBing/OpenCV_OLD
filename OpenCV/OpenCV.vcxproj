@@ -76,14 +76,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="color_cluster.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="ROI\roi.cpp" />
     <ClCompile Include="ROI\roi_mat.cpp" />
     <ClCompile Include="ROI\roi_merge.cpp" />
-    <ClCompile Include="test\test1.cpp" />
-    <ClCompile Include="test\test2.cpp" />
-    <ClCompile Include="xml读写\xml_read_write.cpp" />
-    <ClCompile Include="二值化\Threshold.cpp" />
     <ClCompile Include="人脸检测和行人检测\face_detection.cpp" />
     <ClCompile Include="人脸检测和行人检测\walker_detection.cpp" />
     <ClCompile Include="基础\BrightContrastAdjust.cpp" />
@@ -99,8 +96,6 @@
     <ClCompile Include="视频读取和写入\videolabel.cpp" />
     <ClCompile Include="视频读取和写入\read_video_info.cpp" />
     <ClCompile Include="视频读取和写入\read_write_video.cpp" />
-    <ClCompile Include="通道分离和合并\chanel_split_merge.cpp" />
-    <ClCompile Include="颜色聚类\color_cluster.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="opencv.h" />

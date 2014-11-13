@@ -1,9 +1,9 @@
-/* 该函数的功能是截取原始图像的部分区域保存为一幅新图像
- *
- */
+//该函数的功能是截取原始图像的部分区域保存为一幅新图像
+
 #include <cv.h>
 #include <highgui.h>
-int color_cluster(char *filename,int nCuster );//这是测试设置的ROI能否被颜色聚类接受
+#include "../opencv.h"
+
 
 int ROIimg(char*filename)
 {

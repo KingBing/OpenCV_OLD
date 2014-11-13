@@ -16,73 +16,40 @@
     <Filter Include="源文件\Source">
       <UniqueIdentifier>{a58ec0ee-a31e-48d9-879b-c02972203829}</UniqueIdentifier>
     </Filter>
-    <Filter Include="源文件\Source\test">
-      <UniqueIdentifier>{724dbe2a-cacc-4f3b-914a-743f82453e47}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\Source\人脸检测和行人检测">
-      <UniqueIdentifier>{d1599c25-b7ba-49c3-adf7-a166509f0d8f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\Source\二值化">
-      <UniqueIdentifier>{aeeba3ce-944d-4944-9737-fac8757f501e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\Source\ROI">
       <UniqueIdentifier>{5cf08ea7-96d7-49e7-9824-d2ec0d1348d2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="源文件\Source\颜色聚类">
-      <UniqueIdentifier>{919f42ea-6234-4d40-b1c9-89357003742d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\Source\视频读取和写入">
-      <UniqueIdentifier>{6fe37752-9a13-4843-9f74-a24cb6d68124}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\Source\通道分离和合并">
-      <UniqueIdentifier>{a1c57915-5623-4c36-a7c7-56669971979d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="源文件\Source\xml读写">
-      <UniqueIdentifier>{2a6777b4-cd03-4eec-b756-cf2eac6a6490}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\Source\基础">
       <UniqueIdentifier>{b33e2c1a-d99b-40d4-8bba-4059d65d1172}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Source\检测">
+      <UniqueIdentifier>{d1599c25-b7ba-49c3-adf7-a166509f0d8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Source\视频">
+      <UniqueIdentifier>{6fe37752-9a13-4843-9f74-a24cb6d68124}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="二值化\Threshold.cpp">
-      <Filter>源文件\Source\二值化</Filter>
-    </ClCompile>
     <ClCompile Include="ROI\roi.cpp">
       <Filter>源文件\Source\ROI</Filter>
     </ClCompile>
-    <ClCompile Include="颜色聚类\color_cluster.cpp">
-      <Filter>源文件\Source\颜色聚类</Filter>
-    </ClCompile>
     <ClCompile Include="视频读取和写入\read_write_video.cpp">
-      <Filter>源文件\Source\视频读取和写入</Filter>
-    </ClCompile>
-    <ClCompile Include="test\test1.cpp">
-      <Filter>源文件\Source\test</Filter>
-    </ClCompile>
-    <ClCompile Include="test\test2.cpp">
-      <Filter>源文件\Source\test</Filter>
+      <Filter>源文件\Source\视频</Filter>
     </ClCompile>
     <ClCompile Include="人脸检测和行人检测\face_detection.cpp">
-      <Filter>源文件\Source\人脸检测和行人检测</Filter>
+      <Filter>源文件\Source\检测</Filter>
     </ClCompile>
     <ClCompile Include="人脸检测和行人检测\walker_detection.cpp">
-      <Filter>源文件\Source\人脸检测和行人检测</Filter>
-    </ClCompile>
-    <ClCompile Include="通道分离和合并\chanel_split_merge.cpp">
-      <Filter>源文件\Source\通道分离和合并</Filter>
-    </ClCompile>
-    <ClCompile Include="xml读写\xml_read_write.cpp">
-      <Filter>源文件\Source\xml读写</Filter>
+      <Filter>源文件\Source\检测</Filter>
     </ClCompile>
     <ClCompile Include="视频读取和写入\read_video_info.cpp">
-      <Filter>源文件\Source\视频读取和写入</Filter>
+      <Filter>源文件\Source\视频</Filter>
     </ClCompile>
     <ClCompile Include="视频读取和写入\images_to_video.cpp">
-      <Filter>源文件\Source\视频读取和写入</Filter>
+      <Filter>源文件\Source\视频</Filter>
     </ClCompile>
     <ClCompile Include="ROI\roi_mat.cpp">
       <Filter>源文件\Source\ROI</Filter>
@@ -118,7 +85,10 @@
       <Filter>源文件\Source\基础</Filter>
     </ClCompile>
     <ClCompile Include="视频读取和写入\videolabel.cpp">
-      <Filter>源文件\Source\视频读取和写入</Filter>
+      <Filter>源文件\Source\视频</Filter>
+    </ClCompile>
+    <ClCompile Include="color_cluster.cpp">
+      <Filter>源文件\Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
