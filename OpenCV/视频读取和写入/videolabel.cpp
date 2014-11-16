@@ -23,7 +23,7 @@ vector<Rect> biaozhu_boxs; //所有的标注矩形框
 Rect drawing_box;
 Mat img_original,img_drawing;
 
-
+//说明
 static void help()
 {
 	cout << "This program designed for labeling video \n"
@@ -39,6 +39,7 @@ static void help()
 		<<endl;
 }
 
+//回调函数，显示矩形框
 static void onMouse( int event, int x, int y, int, void* )
 {
 	switch(event)
@@ -84,27 +85,35 @@ static void onMouse( int event, int x, int y, int, void* )
 	return;
 }
 
-int videolabel_main()
+
+int main()
 {
 	help();
-	namedWindow("Video");
 	ofstream outfile("video_label.txt");
-	
+
+	//原始视频显示
+	namedWindow("Video");
 	VideoCapture capture("PicVideo/video/test_o2.mp4");
-	capture>>img_original;
-	img_original.copyTo(img_drawing);
+	capture>>img_original; //读取初始帧
+	imshow("Video",img_original);
+	
+	setMouseCallback( "Video", onMouse, 0 ); //设置回调函数
+
+	//绘制所有矩形,对第一帧的处理
+	img_original.copyTo(img_drawing); //如果后面没有读取新帧的话就对这一帧进行处理
 	for(vector<Rect>::iterator it=biaozhu_boxs.begin();it!=biaozhu_boxs.end();++it)
 	{
+		 cout<<"开始的时候哪有矩形要绘制"<<endl;
 	     rectangle(img_drawing,(*it),Scalar(0,255,0));
+		 outfile<<"1"<<" "
+			 <<(*it).x<<" "<<(*it).y<<" "<<(*it).width<<" "<<(*it).height<<endl;
 	}
-	imshow("Video",img_original);
-	setMouseCallback( "Video", onMouse, 0 );
-
-	int frame_counter=0;
+	
+	int frame_counter=1;
 	while(1)
 	{
 		int c=waitKey(0);
-		if( (c & 255) == 27 ){
+		if( (c & 255) == 27 ){   //ESC键退出
 			cout << "Exiting ...\n";
 			break;
 		}
@@ -121,7 +130,7 @@ int videolabel_main()
 				}
 
 				img_original.copyTo(img_drawing);
-				//save all of the labeling rects
+				//save and draw all of the labeling rects
 				for(vector<Rect>::iterator it=biaozhu_boxs.begin();	it!=biaozhu_boxs.end();++it)
 				{
 					rectangle(img_drawing,(*it),Scalar(0,255,0));
@@ -137,7 +146,7 @@ int videolabel_main()
 					--it_end;
 					biaozhu_boxs.erase(it_end);
 				}
-				img_original.copyTo(img_drawing);
+				img_original.copyTo(img_drawing);//把上次读帧弄过来，在新帧上不再显示
 				for(vector<Rect>::iterator it=biaozhu_boxs.begin();	it!=biaozhu_boxs.end();++it)
 				{
 					rectangle(img_drawing,(*it),Scalar(0,255,0));
@@ -150,7 +159,7 @@ int videolabel_main()
 				img_original.copyTo(img_drawing);
 		}
 
-		imshow("Video",img_drawing);
+	   imshow("Video",img_drawing);
 	}
 
 	return 0;

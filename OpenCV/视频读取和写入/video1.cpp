@@ -17,13 +17,14 @@ using namespace std;
 Rect box; 
 bool drawing_box = false;
 bool gotBB = false;    
+Mat frame;
 
 void draw_framecount(Mat Frame,int framecount); 
-//void mouseHandler(int event, int x, int y, int flags, void *param);
+void mouseHandler(int event, int x, int y, int flags, void *param);
 
-int main()
+int main12()
 {
-	void mouseHandler(int event, int x, int y, int flags, void *param);
+	//void mouseHandler(int event, int x, int y, int flags, void *param);
 	namedWindow("text",CV_WINDOW_AUTOSIZE);
 	
 	//注册窗口鼠标事件
@@ -35,9 +36,7 @@ int main()
 	long count=0;
 	for(;;)
 	{   
-		Mat frame;
 		cap>>frame;
-		
 		rectangle(frame,box,Scalar(0,0,255));//在下一帧中仍画出上帧的选框
 		draw_framecount(frame,count);  //绘制帧数
 		
