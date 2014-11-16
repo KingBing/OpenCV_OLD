@@ -33,39 +33,34 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ViBe.cpp">
-      <Filter>源文件\ViBe</Filter>
-    </ClCompile>
-    <ClCompile Include="ViBe_main.cpp">
-      <Filter>源文件\ViBe</Filter>
-    </ClCompile>
-    <ClCompile Include="opticalflowFarneback.cpp">
-      <Filter>源文件\Opticalflow</Filter>
-    </ClCompile>
-    <ClCompile Include="simpleflow_demo.cpp">
-      <Filter>源文件\Opticalflow</Filter>
-    </ClCompile>
-    <ClCompile Include="MoG_BGS.cpp">
-      <Filter>源文件\GMM</Filter>
-    </ClCompile>
-    <ClCompile Include="GMM_Main.cpp">
-      <Filter>源文件\GMM</Filter>
-    </ClCompile>
-    <ClCompile Include="Diff1.cpp">
+    <ClCompile Include="backdiff\Diff1.cpp">
       <Filter>源文件\Diff</Filter>
     </ClCompile>
-    <ClCompile Include="Diff2.cpp">
+    <ClCompile Include="backdiff\Diff2.cpp">
       <Filter>源文件\Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="MoG\GMM_main.cpp">
+      <Filter>源文件\GMM</Filter>
+    </ClCompile>
+    <ClCompile Include="MoG\MoG_BGS.cpp">
+      <Filter>源文件\GMM</Filter>
+    </ClCompile>
+    <ClCompile Include="opticalflow\opticalflowFarneback.cpp">
+      <Filter>源文件\Opticalflow</Filter>
+    </ClCompile>
+    <ClCompile Include="opticalflow\simpleflow_demo.cpp">
+      <Filter>源文件\Opticalflow</Filter>
+    </ClCompile>
+    <ClCompile Include="ViBe\ViBe.cpp">
+      <Filter>源文件\ViBe</Filter>
+    </ClCompile>
+    <ClCompile Include="ViBe\ViBe_main.cpp">
+      <Filter>源文件\ViBe</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="track.h">
       <Filter>头文件</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="说明.txt">
-      <Filter>源文件\Camshift</Filter>
-    </None>
   </ItemGroup>
 </Project>

@@ -77,21 +77,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Diff1.cpp" />
-    <ClCompile Include="Diff2.cpp" />
-    <ClCompile Include="GMM_Main.cpp" />
+    <ClCompile Include="backdiff\Diff1.cpp" />
+    <ClCompile Include="backdiff\Diff2.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MoG_BGS.cpp" />
-    <ClCompile Include="opticalflowFarneback.cpp" />
-    <ClCompile Include="simpleflow_demo.cpp" />
-    <ClCompile Include="ViBe.cpp" />
-    <ClCompile Include="ViBe_main.cpp" />
+    <ClCompile Include="MoG\GMM_main.cpp" />
+    <ClCompile Include="MoG\MoG_BGS.cpp" />
+    <ClCompile Include="opticalflow\opticalflowFarneback.cpp" />
+    <ClCompile Include="opticalflow\simpleflow_demo.cpp" />
+    <ClCompile Include="ViBe\ViBe.cpp" />
+    <ClCompile Include="ViBe\ViBe_main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="track.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="说明.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

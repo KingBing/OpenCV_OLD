@@ -81,6 +81,8 @@
     <ClCompile Include="circle\hough_circle.cpp" />
     <ClCompile Include="contour\contour1.cpp" />
     <ClCompile Include="contour\contour2.cpp" />
+    <ClCompile Include="contour\contour3.cpp" />
+    <ClCompile Include="contour\contour4.cpp" />
     <ClCompile Include="edge\canny_trackbar.cpp" />
     <ClCompile Include="edge\edge_trackbar.cpp" />
     <ClCompile Include="edge\edge_whole.cpp" />

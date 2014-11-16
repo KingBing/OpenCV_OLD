@@ -19,7 +19,7 @@ using namespace cv;
 
 // Global variables
 bool is_drawing=false;
-vector<Rect> biaozhu_boxs;
+vector<Rect> biaozhu_boxs; //所有的标注矩形框
 Rect drawing_box;
 Mat img_original,img_drawing;
 
@@ -84,7 +84,7 @@ static void onMouse( int event, int x, int y, int, void* )
 	return;
 }
 
-int main()
+int videolabel_main()
 {
 	help();
 	namedWindow("Video");

@@ -90,6 +90,9 @@
     <ClCompile Include="color_cluster.cpp">
       <Filter>源文件\Source</Filter>
     </ClCompile>
+    <ClCompile Include="视频读取和写入\video1.cpp">
+      <Filter>源文件\Source\视频</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="opencv.h">

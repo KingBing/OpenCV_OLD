@@ -69,6 +69,12 @@
     <ClCompile Include="edge\edge_trackbar.cpp">
       <Filter>源文件\edge</Filter>
     </ClCompile>
+    <ClCompile Include="contour\contour3.cpp">
+      <Filter>源文件\contour</Filter>
+    </ClCompile>
+    <ClCompile Include="contour\contour4.cpp">
+      <Filter>源文件\contour</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="detection.h">

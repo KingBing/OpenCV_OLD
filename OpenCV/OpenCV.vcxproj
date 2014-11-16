@@ -93,6 +93,7 @@
     <ClCompile Include="基础\visit_elem_iplimag.cpp" />
     <ClCompile Include="基础\visit_elem_mat.cpp" />
     <ClCompile Include="视频读取和写入\images_to_video.cpp" />
+    <ClCompile Include="视频读取和写入\video1.cpp" />
     <ClCompile Include="视频读取和写入\videolabel.cpp" />
     <ClCompile Include="视频读取和写入\read_video_info.cpp" />
     <ClCompile Include="视频读取和写入\read_write_video.cpp" />

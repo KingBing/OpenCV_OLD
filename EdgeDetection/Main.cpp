@@ -6,24 +6,25 @@
 using namespace cv;
 
 
-int main(int argc, char* argv[])
+int main1(int argc, char* argv[])
 {
 	IplImage *src=cvLoadImage("video_12.JPG");
 	char*filename="video_15.JPG";
 	//-------------------------------¡¾±ßÔµ¼ì²â¡¿------------------------------
 	//	ÃèÊö:
 	//-------------------------------------------------------------------------
-	canny(filename);
-	log(filename);
-	sobel(filename);
-	prewitt(filename);
-	roberts(filename);
-	krisch(filename);
-	susan(filename);
-	laplace(filename);
-	laplace_mat(filename);
-	canny_trackbar(filename);
-	edge_trackbar(filename);
+	//canny(filename);
+	//log(filename);
+	//sobel(filename);
+	//prewitt(filename);
+	//roberts(filename);
+	//krisch(filename);
+	//susan(filename);
+	//laplace(filename);
+	//laplace_mat(filename);
+	//canny_trackbar(filename);
+	//edge_trackbar(filename);
+
 	//-------------------------------¡¾Ö±Ïß¼ì²â¡¿------------------------------
 	//	ÃèÊö:
 	//-------------------------------------------------------------------------
@@ -34,10 +35,11 @@ int main(int argc, char* argv[])
 	//	ÃèÊö:
 	//-------------------------------------------------------------------------
 	//hough_circle(filename);
+	
 	//------------------------------¡¾¾ØÐÎ¼ì²â¡¿------------------------------
 	//	ÃèÊö:
 	//-------------------------------------------------------------------------
-    //square_detection();
+    square_detection();
 
 	
 	//-------------------------------¡¾ÂÖÀª¼ì²â¡¿------------------------------
