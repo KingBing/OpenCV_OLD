@@ -7,7 +7,7 @@
 #include "cv.h"    
 #include "highgui.h"    
     
-int main()    
+int contour4()    
 {    
     IplImage* img = cvLoadImage("samples/lena.jpg", CV_LOAD_IMAGE_GRAYSCALE);    
     IplImage* img_temp = cvCreateImage(cvGetSize(img), 8, 1);    

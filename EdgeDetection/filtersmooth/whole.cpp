@@ -10,8 +10,8 @@
 //            描述：包含程序所依赖的头文件
 //----------------------------------------------------------------------------------------------
 #include <opencv2/core/core.hpp>
-#include<opencv2/highgui/highgui.hpp>
-#include<opencv2/imgproc/imgproc.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
 #include <iostream>
 
 //-----------------------------------【命名空间声明部分】---------------------------------------

@@ -6,10 +6,10 @@
 using namespace cv;
 
 
-int main1(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
 	IplImage *src=cvLoadImage("video_12.JPG");
-	char*filename="video_15.JPG";
+	char*filename="samples/test.jpg";
 	//-------------------------------¡¾±ßÔµ¼ì²â¡¿------------------------------
 	//	ÃèÊö:
 	//-------------------------------------------------------------------------
@@ -39,7 +39,7 @@ int main1(int argc, char* argv[])
 	//------------------------------¡¾¾ØÐÎ¼ì²â¡¿------------------------------
 	//	ÃèÊö:
 	//-------------------------------------------------------------------------
-    square_detection();
+    //square_detection();
 
 	
 	//-------------------------------¡¾ÂÖÀª¼ì²â¡¿------------------------------
@@ -52,7 +52,7 @@ int main1(int argc, char* argv[])
 	//	ÃèÊö:
 	//-------------------------------------------------------------------------
 	//binaryzation(filename);
-	//adaptiveThreshold(filename);
+	adaptiveThreshold(filename);
 	
 	return 0;
 }
