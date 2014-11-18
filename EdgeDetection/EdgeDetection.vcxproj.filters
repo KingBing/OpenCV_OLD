@@ -31,6 +31,9 @@
     <Filter Include="源文件\square">
       <UniqueIdentifier>{bee0b492-01eb-4874-bef9-f4648ec1e240}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\filtersmooth">
+      <UniqueIdentifier>{2e8e47d2-ac20-4fe0-bbe0-81938e39842b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -74,6 +77,18 @@
     </ClCompile>
     <ClCompile Include="contour\contour4.cpp">
       <Filter>源文件\contour</Filter>
+    </ClCompile>
+    <ClCompile Include="filtersmooth\filter.cpp">
+      <Filter>源文件\filtersmooth</Filter>
+    </ClCompile>
+    <ClCompile Include="filtersmooth\blur_median_gaussian.cpp">
+      <Filter>源文件\filtersmooth</Filter>
+    </ClCompile>
+    <ClCompile Include="filtersmooth\whole.cpp">
+      <Filter>源文件\filtersmooth</Filter>
+    </ClCompile>
+    <ClCompile Include="filtersmooth\linear_filter.cpp">
+      <Filter>源文件\filtersmooth</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

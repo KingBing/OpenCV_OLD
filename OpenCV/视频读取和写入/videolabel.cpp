@@ -86,7 +86,7 @@ static void onMouse( int event, int x, int y, int, void* )
 }
 
 
-int main()
+int videolabel_main()
 {
 	help();
 	ofstream outfile("video_label.txt");

@@ -2,7 +2,7 @@
 #include <cv.h>  
 #include <iostream>  
 #include <iomanip>  
-#include "../opencv.h"
+#include "opencv.h"
 
 using namespace std; 
 

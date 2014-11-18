@@ -28,6 +28,9 @@
     <Filter Include="源文件\Diff">
       <UniqueIdentifier>{0bb90e4f-2c4a-48c6-a054-20745153eb24}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\背景建模">
+      <UniqueIdentifier>{78e33cf2-ebcf-4436-a89e-9a1a58fa91da}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -56,6 +59,9 @@
     </ClCompile>
     <ClCompile Include="ViBe\ViBe_main.cpp">
       <Filter>源文件\ViBe</Filter>
+    </ClCompile>
+    <ClCompile Include="bgrestore\bg_restore.cpp">
+      <Filter>源文件\背景建模</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

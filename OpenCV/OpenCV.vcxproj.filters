@@ -28,6 +28,9 @@
     <Filter Include="源文件\Source\视频">
       <UniqueIdentifier>{6fe37752-9a13-4843-9f74-a24cb6d68124}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\Source\XML">
+      <UniqueIdentifier>{69a940b9-573e-4d49-8187-a5d8e1327af8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -92,6 +95,12 @@
     </ClCompile>
     <ClCompile Include="视频读取和写入\video1.cpp">
       <Filter>源文件\Source\视频</Filter>
+    </ClCompile>
+    <ClCompile Include="xml.cpp">
+      <Filter>源文件\Source\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="xml_read_write.cpp">
+      <Filter>源文件\Source\XML</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

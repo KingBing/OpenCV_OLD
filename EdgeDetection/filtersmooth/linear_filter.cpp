@@ -35,9 +35,9 @@ int g_nGaussianBlurValue=3;  //高斯滤波参数值
 //	描述：全局函数声明
 //-----------------------------------------------------------------------------------------------
 //四个轨迹条的回调函数
-static void on_BoxFilter(int, void *);		//均值滤波
+static void on_BoxFilter(int, void *);		//方框滤波
 static void on_MeanBlur(int, void *);		//均值滤波
-static void on_GaussianBlur(int, void *);			//高斯滤波
+static void on_GaussianBlur(int, void *);	//高斯滤波
 
 
 
@@ -49,7 +49,6 @@ int linear_filter(char*path)
 	//改变console字体颜色
 	system("color 5E");  
 
-	// 载入原图
 	g_srcImage = imread( path, 1 );
 	if( !g_srcImage.data ) { printf("Oh，no，读取srcImage错误~！ \n"); return false; }
 
@@ -70,7 +69,7 @@ int linear_filter(char*path)
 	createTrackbar("内核值：", "【<1>方框滤波】",&g_nBoxFilterValue, 40,on_BoxFilter );
 	on_MeanBlur(g_nBoxFilterValue,0);
 	imshow("【<1>方框滤波】", g_dstImage1);
-	//================================================
+
 
 	//=================【<2>均值滤波】==================
 	//创建窗口
@@ -78,7 +77,7 @@ int linear_filter(char*path)
 	//创建轨迹条
 	createTrackbar("内核值：", "【<2>均值滤波】",&g_nMeanBlurValue, 40,on_MeanBlur );
 	on_MeanBlur(g_nMeanBlurValue,0);
-	//================================================
+
 
 	//=================【<3>高斯滤波】=====================
 	//创建窗口
@@ -86,7 +85,7 @@ int linear_filter(char*path)
 	//创建轨迹条
 	createTrackbar("内核值：", "【<3>高斯滤波】",&g_nGaussianBlurValue, 40,on_GaussianBlur );
 	on_GaussianBlur(g_nGaussianBlurValue,0);
-	//================================================
+
 
 
 	//输出一些帮助信息
@@ -106,9 +105,8 @@ int linear_filter(char*path)
 //-----------------------------------------------------------------------------------------------
 static void on_BoxFilter(int, void *)
 {
-	//方框滤波操作
+
 	boxFilter( g_srcImage, g_dstImage1, -1,Size( g_nBoxFilterValue+1, g_nBoxFilterValue+1));
-	//显示窗口
 	imshow("【<1>方框滤波】", g_dstImage1);
 }
 
@@ -118,9 +116,7 @@ static void on_BoxFilter(int, void *)
 //-----------------------------------------------------------------------------------------------
 static void on_MeanBlur(int, void *)
 {
-	//均值滤波操作
 	blur( g_srcImage, g_dstImage2, Size( g_nMeanBlurValue+1, g_nMeanBlurValue+1), Point(-1,-1));
-	//显示窗口
 	imshow("【<2>均值滤波】", g_dstImage2);
 }
 
@@ -130,8 +126,6 @@ static void on_MeanBlur(int, void *)
 //-----------------------------------------------------------------------------------------------
 static void on_GaussianBlur(int, void *)
 {
-	//高斯滤波操作
 	GaussianBlur( g_srcImage, g_dstImage3, Size( g_nGaussianBlurValue*2+1, g_nGaussianBlurValue*2+1 ), 0, 0);
-	//显示窗口
 	imshow("【<3>高斯滤波】", g_dstImage3);
 }

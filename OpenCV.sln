@@ -13,8 +13,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Feature", "Feature\Feature.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Transform", "Transform\Transform.vcxproj", "{6CCFAD49-43C6-4C58-ABDB-21E0759ABF31}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FilterSmooth", "FilterSmooth\FilterSmooth.vcxproj", "{C41CBFC2-FAA2-43A7-A64B-A03BD45B934F}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Track", "Track\Track.vcxproj", "{6554DA57-1312-4258-82A0-0B9B5399C992}"
 EndProject
 Global
@@ -47,10 +45,6 @@ Global
 		{6CCFAD49-43C6-4C58-ABDB-21E0759ABF31}.Debug|Win32.Build.0 = Debug|Win32
 		{6CCFAD49-43C6-4C58-ABDB-21E0759ABF31}.Release|Win32.ActiveCfg = Release|Win32
 		{6CCFAD49-43C6-4C58-ABDB-21E0759ABF31}.Release|Win32.Build.0 = Release|Win32
-		{C41CBFC2-FAA2-43A7-A64B-A03BD45B934F}.Debug|Win32.ActiveCfg = Debug|Win32
-		{C41CBFC2-FAA2-43A7-A64B-A03BD45B934F}.Debug|Win32.Build.0 = Debug|Win32
-		{C41CBFC2-FAA2-43A7-A64B-A03BD45B934F}.Release|Win32.ActiveCfg = Release|Win32
-		{C41CBFC2-FAA2-43A7-A64B-A03BD45B934F}.Release|Win32.Build.0 = Release|Win32
 		{6554DA57-1312-4258-82A0-0B9B5399C992}.Debug|Win32.ActiveCfg = Debug|Win32
 		{6554DA57-1312-4258-82A0-0B9B5399C992}.Debug|Win32.Build.0 = Debug|Win32
 		{6554DA57-1312-4258-82A0-0B9B5399C992}.Release|Win32.ActiveCfg = Release|Win32

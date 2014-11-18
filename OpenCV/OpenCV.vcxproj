@@ -81,6 +81,8 @@
     <ClCompile Include="ROI\roi.cpp" />
     <ClCompile Include="ROI\roi_mat.cpp" />
     <ClCompile Include="ROI\roi_merge.cpp" />
+    <ClCompile Include="xml.cpp" />
+    <ClCompile Include="xml_read_write.cpp" />
     <ClCompile Include="人脸检测和行人检测\face_detection.cpp" />
     <ClCompile Include="人脸检测和行人检测\walker_detection.cpp" />
     <ClCompile Include="基础\BrightContrastAdjust.cpp" />

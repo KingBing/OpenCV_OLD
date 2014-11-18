@@ -6,7 +6,7 @@
 
 #include <opencv2/opencv.hpp>
 
-int main()
+int diff1_main()
 {
 	//ÉùÃ÷IplImageÖ¸Õë  
 	IplImage* pFrame = NULL;   
