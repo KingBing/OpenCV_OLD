@@ -19,7 +19,7 @@ IplImage* img = 0;
 IplImage* img0 = 0;
 CvMemStorage* storage = 0;
 const char* wndname = "Square Detection Demo";
-char* names[] = { "samples/square/square.png",0 };
+char* names[] = { "samples/square/rect.png","samples/square/4.bmp",0 }; //要加载的图片
 
 
 // helper function:求两个向量的夹角

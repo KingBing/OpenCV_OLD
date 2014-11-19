@@ -1,11 +1,15 @@
-//基于opencv的图像边缘检测，有canny、Log、sobel、susan、prewitt、roberts、histogram、laplace、krisch等9中方法。
+//Function：基于opencv的图像边缘检测
+//Detail:包括canny、Log、sobel、susan、prewitt、roberts、laplace、krisch等9中方法。
+//Source:
+//Status:
+//Improve:
+//Info:[11/18/2014 jmy]
+
 #include "../detection.h"
 #include <cmath>
 #include <cxcore.h>
 #include <cv.h>
 #include <highgui.h>
-
-
 
 using namespace cv;
 

@@ -1,4 +1,3 @@
-
 //-----------------------------------【程序说明】----------------------------------------------
 //		程序名称:：《【OpenCV入门教程之十二】OpenCV边缘检测：Canny算子,Sobel算子,Laplace算子,Scharr滤波器合辑合辑》 博文配套源码 
 //		开发所用IDE版本：Visual Studio 2010
@@ -29,7 +28,7 @@ using namespace cv;
 //		描述：全局变量声明
 //-----------------------------------------------------------------------------------------------
 //原图，原图的灰度版，目标图
-Mat g_srcImage, g_srcGrayImage,g_dstImage;
+Mat ge_pSrcImage, g_srcGrayImage,g_dstImage;
 
 //Canny边缘检测相关变量
 Mat g_cannyDetectedEdges;
@@ -66,18 +65,18 @@ int edge_trackbar( char*path)
 	ShowHelpText();
 
 	//载入原图
-	g_srcImage = imread(path);
-	if( !g_srcImage.data ) { printf("Oh，no，读取srcImage错误~！ \n"); return false; }
+	ge_pSrcImage = imread(path);
+	if( !ge_pSrcImage.data ) { printf("Oh，no，读取srcImage错误~！ \n"); return false; }
 
 	//显示原始图
 	namedWindow("【原始图】");
-	imshow("【原始图】", g_srcImage);
+	imshow("【原始图】", ge_pSrcImage);
 
 	// 创建与src同类型和大小的矩阵(dst)
-	g_dstImage.create( g_srcImage.size(), g_srcImage.type() );
+	g_dstImage.create( ge_pSrcImage.size(), ge_pSrcImage.type() );
 
 	// 将原图像转换为灰度图像
-	cvtColor( g_srcImage, g_srcGrayImage, CV_BGR2GRAY );
+	cvtColor( ge_pSrcImage, g_srcGrayImage, CV_BGR2GRAY );
 
 	// 创建显示窗口
 	namedWindow( "【效果图】Canny边缘检测", CV_WINDOW_AUTOSIZE );
@@ -127,8 +126,8 @@ void on_Canny(int, void*)
 	//先将g_dstImage内的所有元素设置为0 
 	g_dstImage = Scalar::all(0);
 
-	//使用Canny算子输出的边缘图g_cannyDetectedEdges作为掩码，来将原图g_srcImage拷到目标图g_dstImage中
-	g_srcImage.copyTo( g_dstImage, g_cannyDetectedEdges);
+	//使用Canny算子输出的边缘图g_cannyDetectedEdges作为掩码，来将原图ge_pSrcImage拷到目标图g_dstImage中
+	ge_pSrcImage.copyTo( g_dstImage, g_cannyDetectedEdges);
 
 	//显示效果图
 	imshow( "【效果图】Canny边缘检测", g_dstImage );
@@ -142,11 +141,11 @@ void on_Canny(int, void*)
 void on_Sobel(int, void*)
 {
 	// 求 X方向梯度
-	Sobel( g_srcImage, g_sobelGradient_X, CV_16S, 1, 0, (2*g_sobelKernelSize+1), 1, 1, BORDER_DEFAULT );
+	Sobel( ge_pSrcImage, g_sobelGradient_X, CV_16S, 1, 0, (2*g_sobelKernelSize+1), 1, 1, BORDER_DEFAULT );
 	convertScaleAbs( g_sobelGradient_X, g_sobelAbsGradient_X );//计算绝对值，并将结果转换成8位
 
 	// 求Y方向梯度
-	Sobel( g_srcImage, g_sobelGradient_Y, CV_16S, 0, 1, (2*g_sobelKernelSize+1), 1, 1, BORDER_DEFAULT );
+	Sobel( ge_pSrcImage, g_sobelGradient_Y, CV_16S, 0, 1, (2*g_sobelKernelSize+1), 1, 1, BORDER_DEFAULT );
 	convertScaleAbs( g_sobelGradient_Y, g_sobelAbsGradient_Y );//计算绝对值，并将结果转换成8位
 
 	// 合并梯度
@@ -164,11 +163,11 @@ void on_Sobel(int, void*)
 void Scharr( )
 {
 	// 求 X方向梯度
-	Scharr( g_srcImage, g_scharrGradient_X, CV_16S, 1, 0, 1, 0, BORDER_DEFAULT );
+	Scharr( ge_pSrcImage, g_scharrGradient_X, CV_16S, 1, 0, 1, 0, BORDER_DEFAULT );
 	convertScaleAbs( g_scharrGradient_X, g_scharrAbsGradient_X );//计算绝对值，并将结果转换成8位
 
 	// 求Y方向梯度
-	Scharr( g_srcImage, g_scharrGradient_Y, CV_16S, 0, 1, 1, 0, BORDER_DEFAULT );
+	Scharr( ge_pSrcImage, g_scharrGradient_Y, CV_16S, 0, 1, 1, 0, BORDER_DEFAULT );
 	convertScaleAbs( g_scharrGradient_Y, g_scharrAbsGradient_Y );//计算绝对值，并将结果转换成8位
 
 	// 合并梯度

@@ -87,9 +87,6 @@
     <ClCompile Include="filtersmooth\whole.cpp">
       <Filter>源文件\filtersmooth</Filter>
     </ClCompile>
-    <ClCompile Include="filtersmooth\linear_filter.cpp">
-      <Filter>源文件\filtersmooth</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="detection.h">
