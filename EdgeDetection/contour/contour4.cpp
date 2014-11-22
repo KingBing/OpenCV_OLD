@@ -9,7 +9,7 @@
     
 int contour4()    
 {    
-    IplImage* img = cvLoadImage("samples/lena.jpg", CV_LOAD_IMAGE_GRAYSCALE);    
+    IplImage* img = cvLoadImage("samples/contour/contour.jpg", CV_LOAD_IMAGE_GRAYSCALE);    
     IplImage* img_temp = cvCreateImage(cvGetSize(img), 8, 1);    
 
     cvThreshold(img, img, 128, 255, CV_THRESH_BINARY);    
@@ -18,14 +18,15 @@ int contour4()
     CvSeq *first_contour = NULL, *c = NULL;    
 
     //////////////////////////////////////////////////////////////////////////    
-    // 1、方法一    
+    //1、方法一    
     cvNamedWindow("contour1");    
     cvCopyImage(img, img_temp);    
     double t = (double)cvGetTickCount();  
     
-	cvFindContours(img_temp, mem_storage, &first_contour);    
-    cvZero(img_temp);    
-    cvDrawContours(img_temp, first_contour,  cvScalar(100), cvScalar(100), 1 );    
+	//默认的提取方法是CV_RETR_LIST                                                                
+	cvFindContours(img_temp, mem_storage, &first_contour,88,CV_RETR_CCOMP);    
+    cvZero(img_temp); //置黑   
+    cvDrawContours(img_temp, first_contour,  cvScalar(100), cvScalar(250),2);    
     
 	t = (double)cvGetTickCount() - t;   
     cvShowImage("contour1", img_temp);    
@@ -55,6 +56,8 @@ int contour4()
     
     cvWaitKey();    
     cvDestroyAllWindows();
+
+	return 0;
     /************************************************************************/    
     /* 经测试 run1 = 16.1431ms run2 = 15.8677ms (参考) 
        不过可以肯定这两中算法时间复杂度是相同的                                     */    
@@ -64,9 +67,11 @@ int contour4()
     // 上述两种方法完成了对轮廓的提取,如想绘制轮廓都得配合cvDrawContours来使用    
     // 而cvDrawContours 函数第5个参数为 max_level 经查ICVL含义如下:    
     //    
-    // 绘制轮廓的最大等级。如果等级为0，绘制单独的轮廓。如果为1，绘制轮廓及在其后的相同的级别下轮廓。    
-    // 如果值为2，所有的轮廓。如果等级为2，绘制所有同级轮廓及所有低一级轮廓，诸此种种。如果值为负数，    
-    // 函数不绘制同级轮廓，但会升序绘制直到级别为abs(max_level)-1的子轮廓。    
+    // 绘制轮廓的最大等级。
+	// 如果为0，绘制单独的轮廓。
+	// 如果为1，绘制轮廓及在其后的相同的级别下轮廓。    
+    // 如果为2，绘制所有同级轮廓及所有低一级轮廓，诸此种种。
+	// 如果值为负数，函数不绘制同级轮廓，但会升序绘制直到级别为abs(max_level)-1的子轮廓。    
     //    
     // 相信好多读者初次都无法理解等级的含义,而且测试时候输入>=1 的整数效果几乎一样    
     // 只有提取轮廓时候的提取模式设为 CV_RETR_CCOMP CV_RETR_TREE 时这个参数才有意义    

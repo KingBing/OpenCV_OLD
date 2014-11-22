@@ -77,7 +77,7 @@ CvSeq* findSquares4( IplImage* img, CvMemStorage* storage )
 			{
 				// apply Canny. Take the upper threshold from slider
 				// and set the lower to 0 (which forces edges merging) 
-				cvCanny( tgray, gray, 0, thresh, 5 );
+				cvCanny( tgray, gray, 0, thresh, 5 ); 
 				// dilate canny output to remove potential holes between edge segments 
 				cvDilate( gray, gray, 0, 1 );
 			}
@@ -91,7 +91,7 @@ CvSeq* findSquares4( IplImage* img, CvMemStorage* storage )
 			// find contours and store them all as a list
 			//storage是临时存储区，contours是存储轮廓点的CvSeq实例
 			cvFindContours( gray, storage, &contours, sizeof(CvContour),
-				            CV_RETR_CCOMP, CV_CHAIN_APPROX_SIMPLE, cvPoint(0,0) );
+				            CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE, cvPoint(0,0) );
 
 			// 轮廓遍历
 			while( contours )

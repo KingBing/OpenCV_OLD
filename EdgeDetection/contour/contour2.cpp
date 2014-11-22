@@ -3,8 +3,6 @@
 #include <opencv2/opencv.hpp>
 using namespace std;
 
-//#pragma comment(linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"")
-
 
 IplImage *greyimg = NULL;
 const char *binWndName = "¶þÖµÍ¼(http://blog.csdn.net/MoreWindows)";

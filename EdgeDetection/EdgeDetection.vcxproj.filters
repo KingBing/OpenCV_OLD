@@ -87,6 +87,15 @@
     <ClCompile Include="filtersmooth\whole.cpp">
       <Filter>源文件\filtersmooth</Filter>
     </ClCompile>
+    <ClCompile Include="contour\contours.c">
+      <Filter>源文件\contour</Filter>
+    </ClCompile>
+    <ClCompile Include="contour\cvContours.cpp">
+      <Filter>源文件\contour</Filter>
+    </ClCompile>
+    <ClCompile Include="filtersmooth\meanshift_smooth_segmentation.cpp">
+      <Filter>源文件\filtersmooth</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="detection.h">
