@@ -10,5 +10,5 @@
 /OpenCV.sdf
 
 #ignore image
-*.[oa],*.jpg,*bmp,*png
-*.wmv,*.avi,*.AVI£¬*.opensdf
+*.[oa],*.jpg,*.bmp,*.png,
+*.wmv,*.avi,*.AVI£¬*.opensdf£¬*.JPG,*.tif,*.obj,*.tlog
