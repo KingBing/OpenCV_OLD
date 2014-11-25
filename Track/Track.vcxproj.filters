@@ -63,6 +63,12 @@
     <ClCompile Include="bgrestore\bg_restore.cpp">
       <Filter>源文件\背景建模</Filter>
     </ClCompile>
+    <ClCompile Include="backdiff\Diff_Mat.cpp">
+      <Filter>源文件\Diff</Filter>
+    </ClCompile>
+    <ClCompile Include="backdiff\Diff3.cpp">
+      <Filter>源文件\Diff</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="track.h">

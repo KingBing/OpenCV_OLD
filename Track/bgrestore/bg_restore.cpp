@@ -13,7 +13,7 @@ using namespace cv;
 using namespace std;
 
 
-int main()
+int bg_restore_main()
 {
 	VideoCapture video("bike.avi");
 	Mat frame,mask,thresholdImage, output;

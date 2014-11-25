@@ -5,6 +5,9 @@
  */
 
 #include <opencv2/opencv.hpp>
+#include <iostream>
+
+using namespace std;
 
 int diff1_main()
 {
@@ -17,16 +20,24 @@ int diff1_main()
 	CvMat* pBkMat = NULL;  
 	CvCapture* pCapture = NULL;  
 	int nFrmNum = 0;  
+	
 	//创建窗口  
 	cvNamedWindow("video", 1);  
 	cvNamedWindow("background",1);  
 	cvNamedWindow("foreground",1);  
+	
 	//使窗口有序排列  
 	cvMoveWindow("video", 30, 0);  
 	cvMoveWindow("background", 360, 0);  
 	cvMoveWindow("foreground", 690, 0);  
-	pCapture = cvCaptureFromAVI("diff_flash.wmv");   //读入已有视频用此句  
+	pCapture = cvCaptureFromAVI("bike.avi");   //读入已有视频用此句  
 	//pCapture = cvCaptureFromCAM(0);           //从摄像头读入视频用此  
+	if (!pCapture)
+	{
+		cout<<"打开失败"<<endl;
+		return -1;
+	}
+	
 	while(pFrame = cvQueryFrame( pCapture ))  
 	{  
 		nFrmNum++;  
@@ -59,9 +70,12 @@ int diff1_main()
 			cvRunningAvg(pFrameMat, pBkMat, 0.003, 0);  
 			//将背景转化为图像格式，用以显示  
 			cvConvert(pBkMat, pBkImg);  
-			pFrame->origin = IPL_ORIGIN_BL;  
-			pFrImg->origin = IPL_ORIGIN_BL;  
-			pBkImg->origin = IPL_ORIGIN_BL;  
+			
+			//以下三语句控制图像反转的
+			//pFrame->origin = IPL_ORIGIN_BL;  
+			//pFrImg->origin = IPL_ORIGIN_BL;  
+			//pBkImg->origin = IPL_ORIGIN_BL;  
+
 			cvShowImage("video", pFrame);  
 			cvShowImage("background", pBkImg);  
 			cvShowImage("foreground", pFrImg);  
@@ -72,6 +86,7 @@ int diff1_main()
 				break;  
 		}  
 	}  
+
 	//销毁窗口  
 	cvDestroyWindow("video");  
 	cvDestroyWindow("background");  

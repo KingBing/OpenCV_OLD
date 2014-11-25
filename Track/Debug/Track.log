@@ -1,16 +1,20 @@
-﻿生成启动时间为 2014/11/18 16:30:23。
+﻿生成启动时间为 11/25/2014 8:12:45 PM。
      1>项目“E:\360YPan\Git\OpenCV_Github\Track\Track.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
-         正在创建“Debug\Track.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+         正在对“Debug\Track.unsuccessfulbuild”执行 Touch 任务。
        ClCompile:
-         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt bgrestore\bg_restore.cpp
-         bg_restore.cpp
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt backdiff\Diff2.cpp
+         Diff2.cpp
+     1>c:\opencv\opencv2.4.10\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
        ManifestResourceCompile:
          所有输出均为最新。
        Link:
          c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\360YPan\Git\OpenCV_Github\Debug\Track.exe" /INCREMENTAL /NOLOGO opencv_core2410d.lib opencv_highgui2410d.lib opencv_imgproc2410d.lib opencv_video2410d.lib opencv_core2410d.lib opencv_highgui2410d.lib opencv_imgproc2410d.lib opencv_videostab2410d.lib opencv_contrib2410d.lib opencv_features2d2410d.lib opencv_flann2410d.lib opencv_gpu2410d.lib opencv_legacy2410d.lib opencv_ml2410d.lib opencv_nonfree2410d.lib opencv_objdetect2410d.lib opencv_superres2410d.lib opencv_ts2410d.lib opencv_photo2410d.lib opencv_stitching2410d.lib opencv_video2410d.lib opencv_calib3d2410d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Track.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\360YPan\Git\OpenCV_Github\Debug\Track.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\360YPan\Git\OpenCV_Github\Debug\Track.lib" /MACHINE:X86 Debug\Track.exe.embed.manifest.res
          Debug\Diff1.obj
          Debug\Diff2.obj
+         Debug\Diff3.obj
+         Debug\Diff_Mat.obj
          Debug\bg_restore.obj
          Debug\main.obj
          Debug\GMM_main.obj
@@ -32,4 +36,4 @@
 
 生成成功。
 
-已用时间 00:00:01.91
+已用时间 00:00:02.13

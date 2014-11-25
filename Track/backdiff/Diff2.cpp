@@ -17,7 +17,7 @@
 //#pragma comment(lib, "cxcore.lib")
 //#pragma comment(lib, "highgui.lib")
 
-int diff1_main( int argc, char** argv )
+int diff2_main( int argc, char** argv )
 {
 	//ÉùÃ÷IplImageÖ¸Õë
 	IplImage* pFrame = NULL; 
@@ -42,7 +42,7 @@ int diff1_main( int argc, char** argv )
 	cvMoveWindow("foreground", 690, 0);
 
 
-	if( !(pCapture = cvCaptureFromAVI("diff_flash1s.wmv")))
+	if( !(pCapture = cvCaptureFromAVI("bike.avi")))
 	{
 		//pCapture = cvCaptureFromCAM(-1))
 		fprintf(stderr, "Can not open camera.\n");

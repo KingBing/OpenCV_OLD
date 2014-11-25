@@ -79,6 +79,8 @@
   <ItemGroup>
     <ClCompile Include="backdiff\Diff1.cpp" />
     <ClCompile Include="backdiff\Diff2.cpp" />
+    <ClCompile Include="backdiff\Diff3.cpp" />
+    <ClCompile Include="backdiff\Diff_Mat.cpp" />
     <ClCompile Include="bgrestore\bg_restore.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MoG\GMM_main.cpp" />
