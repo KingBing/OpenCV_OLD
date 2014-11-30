@@ -90,9 +90,6 @@
     <ClCompile Include="视频读取和写入\videolabel.cpp">
       <Filter>源文件\Source\视频</Filter>
     </ClCompile>
-    <ClCompile Include="color_cluster.cpp">
-      <Filter>源文件\Source</Filter>
-    </ClCompile>
     <ClCompile Include="视频读取和写入\video1.cpp">
       <Filter>源文件\Source\视频</Filter>
     </ClCompile>
@@ -101,6 +98,15 @@
     </ClCompile>
     <ClCompile Include="xml_read_write.cpp">
       <Filter>源文件\Source\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="compare_img.cpp">
+      <Filter>源文件\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="基础\DataStructure.cpp">
+      <Filter>源文件\Source\基础</Filter>
+    </ClCompile>
+    <ClCompile Include="color_cluster.cpp">
+      <Filter>源文件\Source\基础</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

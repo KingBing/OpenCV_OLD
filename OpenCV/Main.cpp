@@ -1,6 +1,6 @@
 #include "opencv.h"
 
-int main_test(int argc,char*argv[])
+int main(int argc,char*argv[])
 {
 	//读取文件夹内的指定格式的所有文件
 	//char filename[50];
@@ -14,8 +14,8 @@ int main_test(int argc,char*argv[])
 	//}
 	
 	
-	char*videoname="PicVideo//test_o2.mp4";
-	char*imagename="PicVideo//fruits.png";
+	char*videoname="samples//test_o2.mp4";
+	char*imagename="samples//colorreduce.jpg";
 		
 	/*基础 */
     //rgb2hsv(imagename); //颜色空间转换
@@ -47,8 +47,8 @@ int main_test(int argc,char*argv[])
 	//roi_mat(); 
 	//roi_merge();
 	
-	/*颜色聚类*/
-	//color_cluster(imagename,2);
+	/*颜色聚类,颜色约减*/
+	color_cluster(imagename,3);
 		
 	/*通道分离和合并*/
 	//channel_split_merge();
